@@ -8,5 +8,5 @@ Let's start!
 
 ## Feature
 
--[] BEM
--[] ...
+- [x] BEM
+- [ ] ...

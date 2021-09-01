@@ -1,3 +1,5 @@
+@import "./utils/vars.scss";
+
 *,
 *::before,
 *::after {
@@ -6,5 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+}
+
 .app {
+  background-color: $color-secondary;
 }

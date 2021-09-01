@@ -4,9 +4,21 @@ This gonna be more lit than before.
 Hopefully, I would make it more engaging and eye-catching.
 Let's start!
 
-:rocket: [https://mshahanwaz.me/](https://mshahanwaz.me/)
+:rocket: Link - [mshahanwaz.me/](https://mshahanwaz.me/)
 
-## Feature
+### Todo
+
+- [x] Header
+- [ ] ...
+
+### Best Practices
 
 - [x] BEM
 - [ ] ...
+
+### Fonts
+
+- [ ] Poppins
+- [ ] Railway
+- [ ] Antic Didone
+- [ ] Fira Code

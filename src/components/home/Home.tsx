@@ -1,11 +1,7 @@
 import "./Home.scss";
 
 function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
+  return <main className="home container"></main>;
 }
 
 export default Home;

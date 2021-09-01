@@ -1,0 +1,19 @@
+@import "./vars.scss";
+
+// tags
+a {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+a:hover {
+  color: $color-tertiary;
+}
+
+// classes
+.container {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}

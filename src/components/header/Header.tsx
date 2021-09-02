@@ -1,6 +1,15 @@
+import Sidebar from "../sidebar/Sidebar";
 import "./Header.scss";
 
-function Header() {
+interface Props {
+  open: number;
+  handleChange: any;
+}
+
+function Header(props: Props) {
+  const { open, handleChange } = props;
+
+
   return (
     <header className="header">
       <nav className="header__nav">
@@ -10,26 +19,32 @@ function Header() {
         </div>
         <div className="header__links">
           <div className="header__link">
-            <a href="/#">About</a>
+            <a href="/#about">About</a>
           </div>
           <div className="header__link">
-            <a href="/#">Projects</a>
+            <a href="/#projects">Projects</a>
           </div>
           <div className="header__link">
-            <a href="/#">Work Exp.</a>
+            <a href="/#workexp">Work Exp.</a>
           </div>
           <div className="header__link">
-            <a href="/#">Blogs</a>
+            <a href="/#blogs">Blogs</a>
           </div>
           <div className="header__link">
-            <a href="/#">Find Me</a>
+            <a href="/#findme">Find Me</a>
           </div>
         </div>
         <div className="header__toggle">
-          <input type="checkbox" name="toggler" id="toggler" />
+          <input
+            type="checkbox"
+            onClick={handleChange}
+            name="toggler"
+            id="toggler"
+          />
           <label htmlFor="toggler"></label>
         </div>
       </nav>
+      <Sidebar open={open} handleChange={handleChange} />
     </header>
   );
 }

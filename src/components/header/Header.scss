@@ -5,19 +5,21 @@
   position: fixed;
   top: 0;
   width: 100%;
-  // background-color: $color-secondary;
-  padding: 20px;
+  // background-color: $color-tertiary;
+  z-index: 2;
+  color: $color-primary;
 }
 
 .header__nav {
-  position: relative;
   // background-color: bisque;
-  max-width: 1500px;
+  position: relative;
+  max-width: 1600px;
+  height: 20vh;
   margin: 0 auto;
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 .header__logo {
@@ -73,7 +75,9 @@
 }
 
 .header__link a {
+  white-space: nowrap;
   // text-transform: uppercase;
+  // font-weight: 500;
 }
 
 .header__toggle {
@@ -93,6 +97,7 @@
   border-radius: 100%;
   background-color: $color-tertiary;
   display: block;
+  cursor: pointer;
 }
 
 .header__toggle input {
@@ -102,5 +107,5 @@
 }
 
 input:checked + label {
-  background-color: black;
+  background-color: $color-tertiary;
 }

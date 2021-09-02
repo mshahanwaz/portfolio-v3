@@ -7,4 +7,8 @@ $font-code: "Fira Code", monospace;
 // colors
 $color-primary: #ffffff;
 $color-secondary: #141414;
-$color-tertiary: #00ffff;
+
+:root {
+  --color-tertiary: #fdff8b;
+}
+$color-tertiary: var(--color-tertiary);

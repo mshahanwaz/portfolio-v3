@@ -1,0 +1,75 @@
+@import "../../utils/vars.scss";
+
+.sidebar {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: $color-primary;
+  position: absolute;
+  top: 0;
+  padding: 0 30px;
+  z-index: 5;
+}
+
+.show-seek {
+  animation: 0.5s seek ease;
+  right: 0;
+}
+
+.show-hide {
+  animation: 0.5s hide ease;
+  right: -400px;
+}
+
+.close {
+  right: -400px;
+}
+
+@keyframes hide {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+
+@keyframes seek {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.sidebar__head {
+  color: black !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  p {
+    font-size: 1rem;
+    font-family: $font-primary;
+  }
+  i {
+    cursor: pointer;
+  }
+}
+
+.sidebar__colors {
+  display: flex;
+  // justify-content: ;
+  flex-wrap: wrap;
+  span {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    border: 3px solid black;
+    cursor: pointer;
+  }
+}

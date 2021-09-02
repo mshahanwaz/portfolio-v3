@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.scss";
 import About from "./components/about/About";
 import Blogs from "./components/blog/Blogs";
@@ -10,17 +11,24 @@ import Skills from "./components/skill/Skills";
 import Works from "./components/work/Works";
 
 function App() {
+  const [open, setOpen] = useState<number>(0);
+  const handleChange = () => {
+    setOpen(open === 1 ? 2 : 1);
+  };
+
   return (
     <div className="app">
-      <Header />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Works />
-      <Blogs />
-      <Chart />
-      <Contact />
+      <Header open={open} handleChange={handleChange} />
+      <div onClick={(a) => setOpen(open > 0 ? 2 : 0)}>
+        <Home />
+        <About />
+        <Projects />
+        <Skills />
+        <Works />
+        <Blogs />
+        <Chart />
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -1,6 +1,19 @@
 @import "./vars.scss";
 
 // tags
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
   color: $color-primary;
@@ -8,6 +21,10 @@ a {
 
 a:hover {
   color: $color-tertiary;
+}
+
+i {
+  font-size: 2rem;
 }
 
 // classes

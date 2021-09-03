@@ -28,7 +28,7 @@ function Home() {
             <img src={P3} alt="" />
           </div>
         </div>
-        <div className="home__left">Time - {time}</div>
+        <div className="home__left">{time}</div>
         <div className="home__mouse">
           <a href="/#about">
             <i className="bi bi-mouse"></i>
@@ -39,7 +39,7 @@ function Home() {
             <i className={"bi bi-person-circle"}></i>
           </div>
           <span></span>
-          <div className="home__todo" >Todo</div>
+          <div className="home__todo">To-do</div>
         </div>
       </div>
     </main>

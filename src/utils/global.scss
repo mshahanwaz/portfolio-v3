@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: $color-tertiary;
+  color: $color-secondary;
+}
+
 html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -25,6 +30,15 @@ a:hover {
 
 i {
   font-size: 2rem;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  // display: inline-block;
 }
 
 // classes

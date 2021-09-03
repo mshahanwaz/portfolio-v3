@@ -1,4 +1,3 @@
-@import "../../utils/global.scss";
 @import "../../utils/vars.scss";
 
 .home {
@@ -7,7 +6,6 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  color: $color-primary;
 }
 
 .home__wrapper {
@@ -16,6 +14,7 @@
   height: 80%;
   margin: 0 auto;
   padding: 0 20px;
+  color: $color-primary;
   // background-color: aquamarine;
   position: relative;
   display: flex;
@@ -43,9 +42,10 @@
       // font-weight: 900;
       // height: 50%;
       width: fit-content;
-      // background-color: wheat;
+      // background-color: rgb(66, 66, 66);
     }
     p:nth-child(2) {
+      // background-color: $color-tertiary;
       align-self: flex-end;
     }
   }
@@ -89,11 +89,9 @@
   transform: translateY(0%) rotate(180deg);
   writing-mode: vertical-rl;
   font-size: 1rem;
-  font-family: $font-code;
+  font-family: $font-secondary;
   text-transform: uppercase;
-  // letter-spacing: 5px;
-  // font-weight: 600;
-  // cursor: pointer;
+  letter-spacing: 5px;
 }
 
 .home__mouse {
@@ -134,13 +132,15 @@
 .home__todo {
   writing-mode: vertical-rl;
   font-size: 1rem;
-  font-family: $font-code;
-  text-transform: uppercase;
-  // letter-spacing: 10px;
+  font-family: $font-secondary;
+  letter-spacing: 5px;
   font-weight: 500;
   cursor: pointer;
+  color: $color-primary;
+  padding-top: 5px;
 }
 
 .home__todo:hover {
-  color: $color-tertiary;
+  background-color: $color-tertiary;
+  color: $color-secondary;
 }

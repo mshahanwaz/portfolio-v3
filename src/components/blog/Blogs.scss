@@ -1,5 +1,47 @@
 @import "../../utils/vars.scss";
 
 .blogs {
-  background-color: darkgoldenrod;
+  // background-color: darkgoldenrod;
+  font-family: $font-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blogs__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  padding: 0 20px;
+  // background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogs__media {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: $font-primary;
+  // background-color: green;
+  .blogs__title {
+    h2 {
+      color: $color-primary;
+    }
+  }
+  .blogs__list {
+    width: inherit;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .blogs__button {
+    button {
+      padding: 0.7rem 3rem;
+      margin: 20px 0;
+    }
+  }
 }

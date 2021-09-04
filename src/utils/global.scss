@@ -62,8 +62,21 @@ button:hover {
   color: $color-tertiary;
 }
 
-h3, h4 {
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: $font-tertiary;
+}
+
+h3,
+h4 {
   font-weight: 600;
+  font-family: $font-secondary;
+}
+
+img,
+span {
+  display: block;
 }
 
 // classes

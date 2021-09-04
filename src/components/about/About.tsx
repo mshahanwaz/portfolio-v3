@@ -12,7 +12,7 @@ function About() {
           </div>
           <div className="about__text">
             <p className="little">Little bit</p>
-            <h1>About me</h1>
+            <h2>About me</h2>
             <ul>
               <li>Developer</li>
               <li>|</li>

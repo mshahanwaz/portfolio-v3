@@ -23,9 +23,9 @@ function App() {
         <Home />
         <About />
         <Projects />
-        <Skills />
         <Works />
         <Blogs />
+        <Skills />
         <Chart />
         <Contact />
       </div>

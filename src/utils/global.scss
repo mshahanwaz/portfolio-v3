@@ -37,8 +37,29 @@ ul {
   list-style: none;
 }
 
-li {
-  // display: inline-block;
+i {
+  font-size: 1.5rem;
+  &:hover {
+    color: $color-tertiary;
+  }
+}
+
+// li {
+//   display: inline-block;
+// }
+
+button {
+  background-color: transparent;
+  width: fit-content;
+  color: $color-primary;
+  border: 2px solid $color-primary;
+  border-radius: 500px;
+  cursor: pointer;
+  outline: none;
+}
+button:hover {
+  border-color: $color-tertiary;
+  color: $color-tertiary;
 }
 
 // classes

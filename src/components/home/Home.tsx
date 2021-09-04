@@ -36,7 +36,7 @@ function Home() {
         </div>
         <div className="home__right">
           <div className="home__login">
-            <i className={"bi bi-person-circle"}></i>
+            <i className={"bi bi-person"}></i>
           </div>
           <span></span>
           <div className="home__todo">To-do</div>

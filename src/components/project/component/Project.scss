@@ -1,0 +1,84 @@
+@import "../../../utils/vars.scss";
+
+.project {
+  width: inherit;
+}
+
+.open {
+  .project__detail {
+    display: block;
+    padding: 20px;
+    border-bottom: 1px solid $color-primary;
+  }
+}
+
+.project__wrapper {
+}
+
+.project__head {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $color-primary;
+  .project__title {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    span {
+      display: inline-block;
+      font-weight: 500;
+    }
+  }
+  a {
+    margin-right: 20px;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  button {
+    border: none;
+    padding: 1px !important;
+    i {
+      // text-align: center;
+      // display: block;
+    }
+  }
+}
+
+.project__detail {
+  display: none;
+  .project__whom {
+    font-family: $font-secondary;
+    h4 {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+  }
+  .project__description {
+    font-family: $font-primary;
+    p {
+      font-weight: 300;
+    }
+  }
+  .project__tags {
+    font-family: $font-code;
+    span {
+      display: inline-block;
+      border: 2px dashed $color-primary;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      &:not(&:last-child) {
+        margin-right: 10px;
+      }
+      &:hover {
+        color: $color-tertiary;
+        border-color: $color-tertiary;
+      }
+    }
+  }
+}

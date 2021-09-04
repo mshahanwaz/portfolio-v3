@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import "./Project.scss";
 
 interface Props {
@@ -12,9 +12,9 @@ interface Props {
 
 function Project(props: Props) {
   const { open, setOpen, setPrevious, previous, index } = props;
+  const [noChangeOpen, setNoChangeOpen] = useState(open[index]);
 
-  // useEffect(() => {
-  // }, []);
+  // useEffect(() => {}, [open, index]);
 
   const handleOpen = () => {
     if (previous !== index) setPrevious(index);
@@ -23,6 +23,15 @@ function Project(props: Props) {
         return i === index ? !open[i] : false;
       })
     );
+    // if (open[index]) {
+    //   setOpen(
+    //     open.map((_, i) => {
+    //       let newIndex = (previous + 1) % 3;
+    //       setPrevious(newIndex);
+    //       return i === newIndex ? true : false;
+    //     })
+    //   );
+    // }
   };
 
   return (
@@ -37,11 +46,11 @@ function Project(props: Props) {
             <a href="/#op">
               <i className="bi bi-github"></i>
             </a>
-            <button onClick={handleOpen}>
+            <button>
               {open[index] ? (
                 <i className="bi bi-caret-up-fill"></i>
               ) : (
-                <i className="bi bi-caret-down"></i>
+                <i className="bi bi-caret-down" onClick={handleOpen}></i>
               )}
             </button>
           </div>

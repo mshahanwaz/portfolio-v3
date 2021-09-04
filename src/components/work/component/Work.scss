@@ -1,0 +1,19 @@
+@import "../../../utils/vars.scss";
+
+.work {
+  // background-color: rgb(114, 64, 0);
+}
+
+.work__head {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h3 {
+    margin-right: 40px;
+  }
+  i {
+    cursor: pointer;
+    display: block;
+  }
+}

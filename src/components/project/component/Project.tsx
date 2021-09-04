@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import "./Project.scss";
 
 interface Props {
@@ -12,7 +12,6 @@ interface Props {
 
 function Project(props: Props) {
   const { open, setOpen, setPrevious, previous, index } = props;
-  const [noChangeOpen, setNoChangeOpen] = useState(open[index]);
 
   // useEffect(() => {}, [open, index]);
 
@@ -23,15 +22,6 @@ function Project(props: Props) {
         return i === index ? !open[i] : false;
       })
     );
-    // if (open[index]) {
-    //   setOpen(
-    //     open.map((_, i) => {
-    //       let newIndex = (previous + 1) % 3;
-    //       setPrevious(newIndex);
-    //       return i === newIndex ? true : false;
-    //     })
-    //   );
-    // }
   };
 
   return (

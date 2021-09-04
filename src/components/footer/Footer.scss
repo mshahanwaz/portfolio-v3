@@ -1,0 +1,31 @@
+@import "../../utils/vars.scss";
+
+.footer {
+  width: inherit;
+  position: absolute;
+  bottom: 40px;
+  margin: 0 auto;
+  // background-color: khaki;
+  .footer__wrapper {
+    width: inherit;
+    // background-color: lawngreen;
+    p {
+      // background-color: lightcoral;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-primary;
+      font-family: $font-primary;
+      font-weight: 300;
+      span {
+        padding: 0 10px;
+        font-weight: 700;
+        font-family: $font-secondary;
+      }
+      &:not(&:first-child) {
+        opacity: 0.8;
+        margin-top: 5px;
+      }
+    }
+  }
+}

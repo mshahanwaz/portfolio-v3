@@ -56,6 +56,9 @@ button {
   border-radius: 500px;
   cursor: pointer;
   outline: none;
+  font-family: $font-secondary;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 button:hover {
   border-color: $color-tertiary;

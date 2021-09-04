@@ -1,5 +1,76 @@
 @import "../../utils/vars.scss";
 
 .contact {
-  background-color: rgb(235, 14, 255);
+  // background-color: rgb(50, 100, 0);
+  font-family: $font-secondary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  padding: 0 20px;
+  // background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__media {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $font-primary;
+  // background-color: green;
+  .contact__title {
+    h2 {
+      color: $color-primary;
+      margin-bottom: 20px;
+    }
+  }
+  .contact__social {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    a {
+      &:not(&:first-child) {
+        margin-left: 40px;
+      }
+      i {
+        font-size: 2rem;
+      }
+    }
+  }
+  .contact__emailPhone {
+    width: inherit;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    .link {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      &:not(&:first-child) {
+        margin-left: 40px;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  .contact__button {
+    margin-bottom: 20px;
+    button {
+      padding: 0.7rem 3rem;
+      margin: 20px 0;
+    }
+  }
 }

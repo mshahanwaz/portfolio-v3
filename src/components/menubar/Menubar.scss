@@ -1,0 +1,74 @@
+@import "../../utils/vars.scss";
+
+.menubar {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: $color-tertiary;
+  position: absolute;
+  top: 0;
+  padding: 0 30px;
+  z-index: 5;
+  color: $color-secondary;
+}
+
+.show-seek-menu {
+  animation: 0.5s seek-menu ease;
+  left: 0;
+}
+
+.show-hide-menu {
+  animation: 0.5s hide-menu ease;
+  left: -400px;
+}
+
+.close-menu {
+  left: -400px;
+}
+
+@keyframes hide-menu {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: -400px;
+  }
+}
+
+@keyframes seek-menu {
+  0% {
+    left: -400px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.menubar__head {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20vh;
+  i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: $color-secondary;
+  }
+}
+
+.menubar__options {
+  display: flex;
+  flex-direction: column;
+  .menubar__link {
+    padding: 10px;
+    a {
+      color: $color-secondary;
+      font: 600 1.5rem $font-secondary;
+      margin: 0 1.5rem;
+      white-space: nowrap;
+      &:hover {
+        border-bottom: 1px solid $color-secondary;
+      }
+    }
+  }
+}

@@ -28,8 +28,7 @@ function Work(props: Props) {
         <div
           className="work__head"
           style={{
-            borderTop: index === 1 ? "1px solid white" : "none",
-            borderBottom: index === 1 ? "1px solid white" : "none",
+            borderTop: index > 0 ? "1px solid white" : "none",
             borderRight: open[index] ? "none" : "1px solid white",
           }}
         >

@@ -11,7 +11,7 @@ function About() {
             <img src={P1} alt="" />
           </div>
           <div className="about__text">
-            <p className="little">Little bit</p>
+            <p>Little bit</p>
             <h2>About me</h2>
             <ul>
               <li>Developer</li>

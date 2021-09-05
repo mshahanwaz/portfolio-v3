@@ -1,9 +1,6 @@
 @import "../../utils/vars.scss";
 
 .home {
-  // background-color: yellowgreen;
-  width: 100%;
-  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -15,18 +12,16 @@
   margin: 0 auto;
   padding: 0 20px;
   color: $color-primary;
-  // background-color: aquamarine;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .home__media {
   font-family: $font-tertiary;
   width: 60%;
   height: 65%;
-  // background-color: rgb(227, 199, 255);
   position: relative;
   .home__text {
     position: relative;
@@ -39,13 +34,9 @@
     p {
       font-family: $font-tertiary;
       font-size: 8rem;
-      // font-weight: 900;
-      // height: 50%;
       width: fit-content;
-      // background-color: rgb(66, 66, 66);
     }
     p:nth-child(2) {
-      // background-color: $color-tertiary;
       align-self: flex-end;
     }
   }
@@ -56,28 +47,27 @@
     top: 0;
     img {
       width: 200px;
-      // height: 300px;
       object-fit: contain;
       position: absolute;
       opacity: 0.6;
     }
     img:nth-child(1) {
-      top: 25%;
-      left: 50%;
-      z-index: 3;
-      transform: translate(-25%, 0);
+      top: 70%;
+      left: 10%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
     }
     img:nth-child(2) {
-      top: 35%;
-      left: 30%;
-      z-index: 1;
-      transform: translate(-25%, 0);
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      transform: translate(-50%, -50%);
     }
     img:nth-child(3) {
-      top: 40%;
-      left: 53%;
+      top: 30%;
+      right: 10%;
       z-index: 2;
-      transform: translate(50%, 0);
+      transform: translate(50%, -50%);
     }
   }
 }
@@ -117,9 +107,8 @@
   right: 20px;
   transform: translateY(0%);
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
-  // writing-mode: vertical-rl;
   span {
     height: 100px;
     width: 1.5px;
@@ -131,16 +120,11 @@
 
 .home__todo {
   writing-mode: vertical-rl;
-  font-size: 1rem;
-  font-family: $font-secondary;
+  font: 500 1rem $font-secondary;
   letter-spacing: 5px;
-  font-weight: 500;
   cursor: pointer;
   color: $color-primary;
-  padding-top: 5px;
-}
-
-.home__todo:hover {
-  background-color: $color-tertiary;
-  color: $color-secondary;
+  &:hover {
+    color: $color-tertiary;
+  }
 }

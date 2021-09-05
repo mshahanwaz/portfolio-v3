@@ -1,42 +1,70 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import Menubar from "../menubar/Menubar";
 import Sidebar from "../sidebar/Sidebar";
 import "./Header.scss";
 
 interface Props {
+  show: number;
   open: number;
   handleChange: any;
   setColor: Dispatch<SetStateAction<string>>;
+  setShow: Dispatch<SetStateAction<number>>;
 }
 
-function Header({ open, handleChange, setColor }: Props) {
+function Header({ open, show, handleChange, setColor, setShow }: Props) {
+  const [showBurger, setShowBurger] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      if (window.scrollY > 200) setShowBurger(true);
+      else setShowBurger(false);
+    });
+  }, []);
+
   return (
     <header className="header">
       <nav className="header__nav">
         <div className="header__logo">
-          <span className="header__burger"></span>
-          <a href="/#">M. Shahanwaz</a>
+          {showBurger ? (
+            <div
+              className="header__burger"
+              onClick={(_) => {
+                setShow(1);
+                if (open === 1) handleChange();
+              }}
+            >
+              <i className="bi bi-list-nested" />
+            </div>
+          ) : (
+            <a href="/#">M. Shahanwaz</a>
+          )}
         </div>
-        <div className="header__links">
-          <div className="header__link">
-            <a href="/#about">About</a>
+        {!showBurger && (
+          <div className="header__links">
+            <div className="header__link">
+              <a href="/#about">About</a>
+            </div>
+            <div className="header__link">
+              <a href="/#projects">Projects</a>
+            </div>
+            <div className="header__link">
+              <a href="/#workexp">Work Exp.</a>
+            </div>
+            <div className="header__link">
+              <a href="/#blogs">Blogs</a>
+            </div>
+            <div className="header__link">
+              <a href="/#findme">Find Me</a>
+            </div>
           </div>
-          <div className="header__link">
-            <a href="/#projects">Projects</a>
-          </div>
-          <div className="header__link">
-            <a href="/#workexp">Work Exp.</a>
-          </div>
-          <div className="header__link">
-            <a href="/#blogs">Blogs</a>
-          </div>
-          <div className="header__link">
-            <a href="/#findme">Find Me</a>
-          </div>
-        </div>
+        )}
         <div className="header__toggle">
           <input
             type="checkbox"
-            onClick={handleChange}
+            onClick={() => {
+              handleChange();
+              setShow(2);
+            }}
             name="toggler"
             id="toggler"
           />
@@ -44,6 +72,7 @@ function Header({ open, handleChange, setColor }: Props) {
         </div>
       </nav>
       <Sidebar open={open} handleChange={handleChange} setColor={setColor} />
+      <Menubar show={show} setShow={setShow} />
     </header>
   );
 }

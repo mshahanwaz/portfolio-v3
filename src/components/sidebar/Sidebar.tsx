@@ -7,40 +7,7 @@ interface Props {
   setColor: Dispatch<SetStateAction<string>>;
 }
 
-const colors = [
-  "#8b8bff",
-  "#8beeff",
-  "#8bffb2",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-  "#8b8bff",
-  "#8beeff",
-  "#8bffb2",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-  "#8b8bff",
-  "#8beeff",
-  "#8bffb2",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-  "#8b8bff",
-  "#8beeff",
-  "#8bffb2",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-];
+const colors = ["#fdff8b", "#df5900", "#ff8b8b", "#d48bff", "#ff8bc9"];
 
 function Sidebar({ open, handleChange, setColor }: Props) {
   const [currentColor, setCurrentColor] = useState<string>("");
@@ -59,7 +26,7 @@ function Sidebar({ open, handleChange, setColor }: Props) {
       setCurrentColor(root);
       setColor(root);
     }
-  }, []);
+  }, [setColor]);
 
   console.log(currentColor);
   return (
@@ -76,7 +43,7 @@ function Sidebar({ open, handleChange, setColor }: Props) {
         {colors.map((color: string, i: number) => (
           <span
             key={i}
-            onClick={(fake) => handleColor(color)}
+            onClick={(_) => handleColor(color)}
             style={{ backgroundColor: color }}
           ></span>
         ))}

@@ -7,9 +7,11 @@ import P2 from "../../assets/images/2.png";
 import P3 from "../../assets/images/3.png";
 
 function Home() {
-  const [time, setTime] = useState(moment().format("HH:mm:ss"));
-  const updateTime = () => setTime(moment().format("HH:mm:ss"));
+  const [time, setTime] = useState<string>("");
+
   useEffect(() => {
+    const updateTime = () => setTime(moment().format("HH:mm:ss"));
+    setTime(moment().format("HH:mm:ss"));
     const interval = setInterval(updateTime, 1000);
     return () => clearInterval(interval);
   }, [time]);
@@ -35,11 +37,13 @@ function Home() {
           </a>
         </div>
         <div className="home__right">
-          <div className="home__login">
-            <i className={"bi bi-person"}></i>
-          </div>
-          <span></span>
           <div className="home__todo">To-do</div>
+          <span></span>
+          <div className="home__login">
+            <a href="/login">
+              <i className={"bi bi-person"}></i>
+            </a>
+          </div>
         </div>
       </div>
     </main>

@@ -6,7 +6,7 @@ function Skills() {
       <div className="skills__wrapper">
         <div className="skills__media">
           <div>
-            <h2>Skills</h2>
+            <h2>Skills & Tools</h2>
           </div>
           <div className="skills__list">
             <span>ReactTS</span>

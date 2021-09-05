@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import "./Sidebar.scss";
 
 interface Props {
   open: number;
   handleChange: any;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
 const colors = [
@@ -11,26 +12,53 @@ const colors = [
   "#8beeff",
   "#8bffb2",
   "#fdff8b",
-  "#ffb98b",
+  "#df5900",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+  "#8b8bff",
+  "#8beeff",
+  "#8bffb2",
+  "#fdff8b",
+  "#df5900",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+  "#8b8bff",
+  "#8beeff",
+  "#8bffb2",
+  "#fdff8b",
+  "#df5900",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+  "#8b8bff",
+  "#8beeff",
+  "#8bffb2",
+  "#fdff8b",
+  "#df5900",
   "#ff8b8b",
   "#d48bff",
   "#ff8bc9",
 ];
 
-const Sidebar: React.FC<Props> = (props: Props) => {
-  const { open, handleChange } = props;
+function Sidebar({ open, handleChange, setColor }: Props) {
   const [currentColor, setCurrentColor] = useState<string>("");
 
   const handleColor = (color: string) => {
     const root = document.documentElement;
     root.style.setProperty("--color-tertiary", color);
+    setColor(color);
     handleChange();
   };
 
   useEffect(() => {
     const root =
       document.documentElement.style.getPropertyValue("--color-tertiary");
-    if (root) setCurrentColor(root);
+    if (root) {
+      setCurrentColor(root);
+      setColor(root);
+    }
   }, []);
 
   console.log(currentColor);
@@ -55,6 +83,6 @@ const Sidebar: React.FC<Props> = (props: Props) => {
       </div>
     </section>
   );
-};
+}
 
 export default Sidebar;

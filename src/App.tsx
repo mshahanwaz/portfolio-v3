@@ -12,13 +12,14 @@ import Works from "./components/work/Works";
 
 function App() {
   const [open, setOpen] = useState<number>(0);
+  const [color, setColor] = useState<string>("");
   const handleChange = () => {
     setOpen(open === 1 ? 2 : 1);
   };
 
   return (
     <div className="app">
-      <Header open={open} handleChange={handleChange} />
+      <Header open={open} handleChange={handleChange} setColor={setColor} />
       <div onClick={(a) => setOpen(open > 0 ? 2 : 0)}>
         <Home />
         <About />
@@ -26,7 +27,7 @@ function App() {
         <Works />
         <Blogs />
         <Skills />
-        <Chart />
+        <Chart color={color} />
         <Contact />
       </div>
     </div>

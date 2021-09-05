@@ -1,15 +1,14 @@
+import { Dispatch, SetStateAction } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import "./Header.scss";
 
 interface Props {
   open: number;
   handleChange: any;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
-function Header(props: Props) {
-  const { open, handleChange } = props;
-
-
+function Header({ open, handleChange, setColor }: Props) {
   return (
     <header className="header">
       <nav className="header__nav">
@@ -44,7 +43,7 @@ function Header(props: Props) {
           <label htmlFor="toggler"></label>
         </div>
       </nav>
-      <Sidebar open={open} handleChange={handleChange} />
+      <Sidebar open={open} handleChange={handleChange} setColor={setColor} />
     </header>
   );
 }

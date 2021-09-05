@@ -16,7 +16,7 @@ function Contact() {
             <a href="/#1">
               <i className="bi bi-linkedin" />
             </a>
-            <a href="/#1">
+            <a href="/#2">
               <i className="bi bi-instagram" />
             </a>
             <a href="/#1">

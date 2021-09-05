@@ -14,15 +14,12 @@ function App() {
   const [open, setOpen] = useState<number>(0);
   const [show, setShow] = useState<number>(0);
   const [color, setColor] = useState<string>("");
-  const handleChange = () => {
-    setOpen(open === 1 ? 2 : 1);
-  };
 
   return (
     <div className="app">
       <Header
         open={open}
-        handleChange={handleChange}
+        setOpen={setOpen}
         setColor={setColor}
         show={show}
         setShow={setShow}

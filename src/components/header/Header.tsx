@@ -6,12 +6,12 @@ import "./Header.scss";
 interface Props {
   show: number;
   open: number;
-  handleChange: any;
+  setOpen: Dispatch<SetStateAction<number>>;
   setColor: Dispatch<SetStateAction<string>>;
   setShow: Dispatch<SetStateAction<number>>;
 }
 
-function Header({ open, show, handleChange, setColor, setShow }: Props) {
+function Header({ open, show, setOpen, setColor, setShow }: Props) {
   const [showBurger, setShowBurger] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Header({ open, show, handleChange, setColor, setShow }: Props) {
               className="header__burger"
               onClick={(_) => {
                 setShow(1);
-                if (open === 1) handleChange();
+                if (open === 1) setOpen(2);
               }}
             >
               <i className="bi bi-list-nested" />
@@ -62,7 +62,7 @@ function Header({ open, show, handleChange, setColor, setShow }: Props) {
           <input
             type="checkbox"
             onClick={() => {
-              handleChange();
+              setOpen(1);
               setShow(2);
             }}
             name="toggler"
@@ -71,7 +71,7 @@ function Header({ open, show, handleChange, setColor, setShow }: Props) {
           <label htmlFor="toggler"></label>
         </div>
       </nav>
-      <Sidebar open={open} handleChange={handleChange} setColor={setColor} />
+      <Sidebar open={open} setOpen={setOpen} setColor={setColor} />
       <Menubar show={show} setShow={setShow} />
     </header>
   );

@@ -26,8 +26,6 @@ function Home() {
           </div>
           <div className="home__pics">
             <img src={P1} alt="" />
-            <img src={P2} alt="" />
-            <img src={P3} alt="" />
           </div>
         </div>
         <div className="home__left">{time}</div>

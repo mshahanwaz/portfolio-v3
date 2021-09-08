@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Dispatch, SetStateAction } from "react";
 import "./Project.scss";
 
@@ -12,8 +11,6 @@ interface Props {
 
 function Project(props: Props) {
   const { open, setOpen, setPrevious, previous, index } = props;
-
-  // useEffect(() => {}, [open, index]);
 
   const handleOpen = () => {
     if (previous !== index) setPrevious(index);
@@ -29,7 +26,15 @@ function Project(props: Props) {
       <div className="project__wrapper">
         <div className="project__head">
           <div className="project__title">
-            <h3>Title - Very Big And Sophisticated</h3>
+            <h3
+              style={{
+                color: open[index]
+                  ? "var(--color-tertiary)"
+                  : "var(--color-primary)",
+              }}
+            >
+              Title - Very Big And Sophisticated
+            </h3>
             <span>22 Sept, 2021</span>
           </div>
           <div className="project__icons">
@@ -38,7 +43,10 @@ function Project(props: Props) {
             </a>
             <button>
               {open[index] ? (
-                <i className="bi bi-caret-up-fill"></i>
+                <i
+                  className="bi bi-caret-up-fill"
+                  style={{ color: "var(--color-tertiary)" }}
+                ></i>
               ) : (
                 <i className="bi bi-caret-down" onClick={handleOpen}></i>
               )}

@@ -9,6 +9,8 @@ $color-primary: #ffffff;
 $color-secondary: #141414;
 
 :root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
   --color-tertiary: #8bffb2;
 }
 $color-tertiary: var(--color-tertiary);

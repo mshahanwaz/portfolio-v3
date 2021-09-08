@@ -63,7 +63,7 @@ function Header({ open, show, setOpen, setColor, setShow }: Props) {
             type="checkbox"
             onClick={() => {
               setOpen(1);
-              setShow(2);
+              if (show === 1) setShow(2);
             }}
             name="toggler"
             id="toggler"

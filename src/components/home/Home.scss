@@ -46,28 +46,15 @@
     height: 100%;
     top: 0;
     img {
-      width: 200px;
+      width: inherit;
+      height: inherit;
       object-fit: contain;
       position: absolute;
       opacity: 0.6;
-    }
-    img:nth-child(1) {
-      top: 70%;
-      left: 10%;
-      z-index: 1;
-      transform: translate(-50%, -50%);
-    }
-    img:nth-child(2) {
       top: 50%;
       left: 50%;
-      z-index: 3;
+      z-index: 1;
       transform: translate(-50%, -50%);
-    }
-    img:nth-child(3) {
-      top: 30%;
-      right: 10%;
-      z-index: 2;
-      transform: translate(50%, -50%);
     }
   }
 }
@@ -111,7 +98,7 @@
   align-items: center;
   span {
     height: 100px;
-    width: 1.5px;
+    width: 1px;
     background-color: $color-primary;
     display: block;
     margin: 10px 0;
@@ -120,7 +107,7 @@
 
 .home__todo {
   writing-mode: vertical-rl;
-  font: 500 1rem $font-secondary;
+  font: 1rem $font-secondary;
   letter-spacing: 5px;
   cursor: pointer;
   color: $color-primary;

@@ -18,9 +18,13 @@ function Menubar({ show, setShow }: Props) {
       }`}
     >
       <div className="menubar__head">
+        <p>Menu</p>
         <i className="bi bi-x" onClick={() => setShow(2)}></i>
       </div>
       <div className="menubar__options">
+        <div className="menubar__link">
+          <a href="/#">Home</a>
+        </div>
         <div className="menubar__link">
           <a href="/#about">About</a>
         </div>

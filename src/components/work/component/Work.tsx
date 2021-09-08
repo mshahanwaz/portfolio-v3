@@ -32,9 +32,20 @@ function Work(props: Props) {
             borderRight: open[index] ? "none" : "1px solid white",
           }}
         >
-          <h3>Title - Very Big And Sophisticated</h3>
+          <h3
+            style={{
+              color: open[index]
+                ? "var(--color-tertiary)"
+                : "var(--color-primary)",
+            }}
+          >
+            Title - Very Big And Sophisticated
+          </h3>
           {open[index] ? (
-            <i className="bi bi-caret-right-fill"></i>
+            <i
+              className="bi bi-caret-right-fill"
+              style={{ color: "var(--color-tertiary)" }}
+            ></i>
           ) : (
             <i className="bi bi-caret-right" onClick={handleOpen}></i>
           )}

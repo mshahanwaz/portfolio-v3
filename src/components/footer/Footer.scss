@@ -5,26 +5,41 @@
   position: absolute;
   bottom: 40px;
   margin: 0 auto;
-  // background-color: khaki;
+  display: flex;
+  justify-content: center;
   .footer__wrapper {
-    width: inherit;
-    // background-color: lawngreen;
+    width: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before,
+    &::after {
+      content: "";
+      width: 100px;
+      height: 1px;
+      background-color: $color-primary;
+    }
+    &::before {
+      margin-right: 40px;
+    }
+    &::after {
+      margin-left: 40px;
+    }
     p {
-      // background-color: lightcoral;
       display: flex;
       justify-content: center;
       align-items: center;
       color: $color-primary;
       font-family: $font-primary;
       font-weight: 300;
-      span {
+      a {
         padding: 0 10px;
         font-weight: 700;
         font-family: $font-secondary;
       }
       &:not(&:first-child) {
         opacity: 0.8;
-        margin-top: 5px;
       }
     }
   }

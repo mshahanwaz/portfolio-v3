@@ -2,7 +2,6 @@
 
 .blog {
   margin: 20px;
-  // background-color: rgb(156, 141, 0);
   color: $color-primary;
   border: 1px solid $color-primary;
 }
@@ -23,6 +22,7 @@
     padding: 10px;
     span {
       font: 400 0.8rem $font-code;
+      color: $color-grey;
     }
     .h-3 {
       margin-top: 5px;
@@ -30,20 +30,24 @@
     .para {
       margin-top: 5px;
       font-size: 0.8rem;
-      font-family: $font-primary;
     }
     .blog__tags {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       .tag {
+        color: $color-grey;
         width: fit-content;
         font: 400 0.6rem $font-code;
-        border: 1px dashed $color-primary;
+        border: 1px dashed $color-grey;
         margin-top: 10px;
         padding: 5px;
         &:not(&:last-child) {
           margin-right: 10px;
+        }
+        &:hover {
+          color: $color-tertiary;
+          border-color: $color-tertiary;
         }
       }
     }

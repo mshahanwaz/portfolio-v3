@@ -59,7 +59,7 @@ function Works() {
                 <div className="works__footer">
                   <ul>
                     <li>21 Sept, 2021</li>
-                    <li>|</li>
+                    <li>-</li>
                     <li>21 Sept, 2022</li>
                   </ul>
                   <a href="/#adsf">

@@ -3,8 +3,6 @@ import { useEffect, useState } from "react";
 import "./Home.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import P1 from "../../assets/images/1.png";
-import P2 from "../../assets/images/2.png";
-import P3 from "../../assets/images/3.png";
 
 function Home() {
   const [time, setTime] = useState<string>("");
@@ -35,7 +33,7 @@ function Home() {
           </a>
         </div>
         <div className="home__right">
-          <div className="home__todo">To-do</div>
+          <div className="home__786">۷۸۶</div>
           <span></span>
           <div className="home__login">
             <a href="/login">

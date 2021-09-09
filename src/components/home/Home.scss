@@ -66,9 +66,8 @@
   transform: translateY(0%) rotate(180deg);
   writing-mode: vertical-rl;
   font-size: 1rem;
-  font-family: $font-secondary;
+  font-family: $font-code;
   text-transform: uppercase;
-  letter-spacing: 5px;
 }
 
 .home__mouse {
@@ -105,11 +104,10 @@
   }
 }
 
-.home__todo {
+.home__786 {
   writing-mode: vertical-rl;
-  font: 1rem $font-secondary;
+  font: 1rem $font-code;
   letter-spacing: 5px;
-  cursor: pointer;
   color: $color-primary;
   &:hover {
     color: $color-tertiary;

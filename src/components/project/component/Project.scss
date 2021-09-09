@@ -21,12 +21,10 @@
   .project__title {
     display: flex;
     flex-direction: column;
-    h3 {
-      margin-bottom: 5px;
-    }
     span {
-      display: inline-block;
+      color: $color-grey;
       font-weight: 500;
+      font-family: $font-code;
     }
   }
   a {
@@ -35,31 +33,28 @@
       font-size: 1.5rem;
     }
   }
-  button {
-    border: none;
-    padding: 1px !important;
+  .project__icons {
+    button {
+      border: none;
+      padding: 1px;
+      color: $color-primary;
+    }
   }
 }
 
 .project__detail {
   display: none;
   .project__whom {
-    font-family: $font-secondary;
     h4 {
       margin-bottom: 5px;
-    }
-  }
-  .project__description {
-    font-family: $font-primary;
-    p {
-      font-weight: 300;
     }
   }
   .project__tags {
     font-family: $font-code;
     span {
+      color: $color-grey;
+      border: 2px dashed $color-grey;
       display: inline-block;
-      border: 2px dashed $color-primary;
       padding: 5px 10px;
       cursor: pointer;
       margin-top: 10px;

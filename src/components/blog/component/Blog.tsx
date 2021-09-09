@@ -6,13 +6,13 @@ function Blog() {
     <div className="blog">
       <div className="blog__wrapper">
         <div className="blog__image">
-          <a href="/#asdf">
+          <a href="/#">
             <img src={W1} alt="" />
           </a>
         </div>
         <div className="blog__details">
           <span>21 Sept, 2021</span>
-          <a href="/#1poi">
+          <a href="/#">
             <h3 className="h-3">Title - Very Big</h3>
           </a>
           <p className="para">

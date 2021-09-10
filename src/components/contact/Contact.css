@@ -1,0 +1,116 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.contact {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.contact__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__media {
+  width: 70%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--color-primary);
+}
+
+.contact__media .contact__title h2 {
+  margin-bottom: 20px;
+}
+
+.contact__media .contact__social {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.contact__media .contact__social a {
+  margin-left: 40px;
+}
+
+.contact__media .contact__social a i {
+  font-size: 2rem;
+}
+
+.contact__media .contact__emailPhone {
+  width: inherit;
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact__media .contact__emailPhone .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__media .contact__emailPhone .link {
+  margin-left: 40px;
+}
+
+.contact__media .contact__emailPhone .link i {
+  margin-right: 10px;
+}
+
+.contact__media .contact__button {
+  margin-bottom: 20px;
+}
+
+.contact__media .contact__button button {
+  padding: 0.7rem 3rem;
+  margin: 20px 0;
+}
+/*# sourceMappingURL=Contact.css.map */

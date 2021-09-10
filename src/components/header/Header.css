@@ -1,0 +1,123 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  color: var(--color-primary);
+}
+
+.header__nav {
+  position: relative;
+  max-width: 1600px;
+  height: 20vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.header__nav .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__nav .header__logo a {
+  font-family: "Antic Didone", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.header__burger {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__burger i {
+  color: var(--color-primary);
+  font-size: 2rem;
+}
+
+.header__burger i:hover {
+  color: var(--color-tertiary);
+}
+
+.header__links {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__links .header__link {
+  margin: 0 1.5rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.header__links .header__link a {
+  white-space: nowrap;
+}
+
+.header__toggle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  overflow: hidden;
+  z-index: 1;
+  padding: 3px;
+  border: 2px solid var(--color-primary);
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.header__toggle label {
+  width: inherit;
+  height: inherit;
+  border-radius: 100%;
+  background-color: var(--color-tertiary);
+  display: block;
+  cursor: pointer;
+}
+
+.header__toggle input {
+  display: none;
+  width: inherit;
+  height: inherit;
+}
+/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,74 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.blogs {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blogs__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.blogs__media {
+  width: 70%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: "Poppins", sans-serif;
+}
+
+.blogs__media .blogs__title h2 {
+  color: var(--color-tertiary);
+}
+
+.blogs__media .blogs__list {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.blogs__media .blogs__button button {
+  padding: 0.7rem 3rem;
+  margin: 20px 0;
+}
+/*# sourceMappingURL=Blogs.css.map */

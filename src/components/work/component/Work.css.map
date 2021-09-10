@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACOA,AAAA,KAAK,CAAC;EACJ,eAAe,CAAA,KAAC;EAChB,iBAAiB,CAAA,QAAC;EAClB,gBAAgB,CAAA,QAAC;EACjB,YAAY,CAAA,QAAC;CACd;;ADND,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,MAAM;CASpB;;AAbD,AAKE,WALS,CAKT,EAAE,CAAC;EACD,YAAY,EAAE,IAAI;CAEnB;;AARH,AASE,WATS,CAST,CAAC,CAAC;EACA,MAAM,EAAE,OAAO;EACf,OAAO,EAAE,KAAK;CACf",
+    "sources": [
+        "Work.scss",
+        "../../../utils/vars.scss"
+    ],
+    "names": [],
+    "file": "Work.css"
+}

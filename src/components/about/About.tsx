@@ -29,6 +29,14 @@ function About() {
             </p>
             <div className="about__social">
               <a
+                href="https://github.com/mshahanwaz"
+                target="_blank"
+                rel="noreferrer noopener"
+                title="Resume"
+              >
+                <i className="bi bi-file-earmark-arrow-down"></i>
+              </a>
+              <a
                 href="https://instagram.com/imshahanwaz"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -41,7 +49,7 @@ function About() {
                 href="https://github.com/mshahanwaz"
                 target="_blank"
                 rel="noreferrer noopener"
-                title="mshahanwaz"
+                title="@mshahanwaz"
               >
                 <i className="bi bi-github"></i>
               </a>

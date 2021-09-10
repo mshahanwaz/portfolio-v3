@@ -1,0 +1,128 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+::selection {
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+html {
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-tertiary);
+}
+
+i {
+  font-size: 2rem;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+i:hover {
+  color: var(--color-tertiary);
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+button {
+  background-color: transparent;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: var(--color-grey);
+  border: 2px solid var(--color-grey);
+  border-radius: 500px;
+  cursor: pointer;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+button:hover {
+  border-color: var(--color-tertiary);
+  color: var(--color-tertiary);
+}
+
+h2,
+h3 {
+  color: var(--color-tertiary);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Antic Didone", sans-serif;
+}
+
+h3 {
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+img,
+span {
+  display: block;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.app {
+  background-color: var(--color-secondary);
+}
+/*# sourceMappingURL=App.css.map */

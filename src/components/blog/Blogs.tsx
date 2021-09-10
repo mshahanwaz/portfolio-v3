@@ -7,7 +7,7 @@ function Blogs() {
       <div className="blogs__wrapper">
         <div className="blogs__media">
           <div className="blogs__title">
-            <h2>Blogs</h2>
+            <h2>Tiny Blogs</h2>
           </div>
           <div className="blogs__list">
             <Blog />

@@ -35,11 +35,14 @@ function Sidebar({ open, setOpen, setColor }: Props) {
       </div>
       <div className="sidebar__colors">
         {colors.map((color: string, i: number) => (
-          <span
-            key={i}
-            onClick={(_) => handleColor(color)}
-            style={{ backgroundColor: color }}
-          ></span>
+          <span className="sidebar__color">
+            <span
+              key={i}
+              onClick={(_) => handleColor(color)}
+              style={{ backgroundColor: color }}
+              title={`#${color}`}
+            ></span>
+          </span>
         ))}
       </div>
     </section>

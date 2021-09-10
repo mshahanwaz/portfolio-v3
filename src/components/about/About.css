@@ -1,0 +1,201 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.about {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+
+.about__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: var(--color-primary);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__media {
+  width: 60%;
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__media .about__pic {
+  height: 70%;
+  position: relative;
+}
+
+.about__media .about__pic img {
+  height: 100%;
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.about__media .about__pic img:hover {
+  -webkit-transform: translate(-20px, -20px);
+          transform: translate(-20px, -20px);
+}
+
+.about__media .about__pic span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--color-tertiary);
+  position: absolute;
+  left: -20px;
+  top: -20px;
+}
+
+.about__media .about__pic span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 20px;
+  background-color: var(--color-tertiary);
+}
+
+.about__media .about__text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+}
+
+.about__media .about__text p {
+  font-family: "Poppins", sans-serif;
+}
+
+.about__media .about__text h2 {
+  font-family: "Antic Didone", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.about__media .about__text ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+  font-family: "Fira Code", monospace;
+  text-transform: uppercase;
+}
+
+.about__media .about__text ul li {
+  padding: 2px 3px;
+}
+
+.about__media .about__text ul li {
+  margin-left: 20px;
+}
+
+.about__media .about__text ul li:nth-child(2n + 1) {
+  font-weight: 600;
+}
+
+.about__media .about__text p {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.about__media .about__text p strong {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+.about__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__social a {
+  position: relative;
+}
+
+.about__social a i {
+  font-size: 1.7rem;
+}
+
+.about__social a .dot {
+  display: block;
+  position: absolute;
+  top: -1px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: var(--color-secondary);
+}
+
+.about__social a .dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: var(--color-tertiary);
+}
+
+.about__social a {
+  margin-left: 40px;
+}
+
+.about__social a:hover .dot::before {
+  background-color: var(--color-primary);
+}
+/*# sourceMappingURL=About.css.map */

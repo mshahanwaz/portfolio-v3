@@ -1,0 +1,66 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.footer {
+  width: inherit;
+  position: absolute;
+  bottom: 40px;
+  margin: 0 auto;
+}
+
+.footer .footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer__wrapper::before, .footer .footer__wrapper::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: var(--color-primary);
+}
+
+.footer .footer__wrapper::before {
+  margin-right: 40px;
+}
+
+.footer .footer__wrapper::after {
+  margin-left: 40px;
+}
+
+.footer .footer__wrapper p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+.footer .footer__wrapper p a {
+  padding: 0 10px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+
+.footer .footer__wrapper p {
+  opacity: 0.8;
+}
+/*# sourceMappingURL=Footer.css.map */

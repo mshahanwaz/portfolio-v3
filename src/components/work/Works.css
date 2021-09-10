@@ -1,0 +1,172 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.works {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Fira Code", monospace;
+}
+
+.works__wrapper {
+  max-width: 1600px;
+  width: 100%;
+  height: 80%;
+  padding: 0 20px;
+  color: var(--color-primary);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.works__media {
+  border: 1px solid var(--color-primary);
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works__media .works__head {
+  width: 100%;
+  border-bottom: 1px solid var(--color-primary);
+}
+
+.works__media .works__head h2 {
+  width: 100%;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.works__media .works__sections {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works__media .works__sections .works__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works__media .works__sections .works__section:first-child {
+  -webkit-box-flex: 0.4;
+      -ms-flex: 0.4;
+          flex: 0.4;
+}
+
+.works__media .works__sections .works__section {
+  -webkit-box-flex: 0.8;
+      -ms-flex: 0.8;
+          flex: 0.8;
+  height: 100%;
+  padding: 20px;
+}
+
+.works__media .works__sections .works__section .works__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works__media .works__sections .works__section .works__details h4 {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-tertiary);
+}
+
+.works__media .works__sections .works__section .works__details .works__points {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.works__media .works__sections .works__section .works__details .works__points .works__point {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px 0 0 0;
+}
+
+.works__media .works__sections .works__section .works__details .works__points .works__point i {
+  color: var(--color-grey);
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.works__media .works__sections .works__section .works__details .works__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.works__media .works__sections .works__section .works__details .works__footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.works__media .works__sections .works__section .works__details .works__footer ul li {
+  color: var(--color-grey);
+  font-family: "Fira Code", monospace;
+  font-weight: 500;
+}
+
+.works__media .works__sections .works__section .works__details .works__footer ul li {
+  margin-left: 10px;
+}
+
+.works__media .works__sections .works__section .works__details .works__footer a {
+  margin-left: 20px;
+}
+/*# sourceMappingURL=Works.css.map */

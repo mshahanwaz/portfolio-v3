@@ -62,14 +62,22 @@
 .sidebar__colors {
   display: flex;
   flex-wrap: wrap;
-  span {
+  .sidebar__color {
     width: 40px;
     height: 40px;
     border-radius: 100%;
     margin: 10px;
-    padding: 10px;
-    display: block;
-    border: 3px solid black;
+    border: 2px solid $color-secondary;
     cursor: pointer;
+    position: relative;
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      border-radius: inherit;
+    }
   }
 }

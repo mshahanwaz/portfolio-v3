@@ -1,0 +1,123 @@
+:root {
+  --color-primary: #fff;
+  --color-secondary: #141414;
+  --color-tertiary: #8bffb2;
+  --color-grey: #c2c2c2;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 400px;
+  height: 100vh;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  padding: 0 30px;
+  z-index: 5;
+}
+
+.show-seek {
+  -webkit-animation: 0.5s seek ease;
+          animation: 0.5s seek ease;
+  right: 0;
+}
+
+.show-hide {
+  -webkit-animation: 0.5s hide ease;
+          animation: 0.5s hide ease;
+  right: -400px;
+}
+
+.close {
+  right: -400px;
+}
+
+@-webkit-keyframes hide {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+
+@keyframes hide {
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: -400px;
+  }
+}
+
+@-webkit-keyframes seek {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes seek {
+  0% {
+    right: -400px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+.sidebar__head {
+  color: black !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+}
+
+.sidebar__head p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar__head i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.sidebar__colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sidebar__colors .sidebar__color {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: 10px;
+  border: 2px solid var(--color-secondary);
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar__colors .sidebar__color span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: inherit;
+}
+/*# sourceMappingURL=Sidebar.css.map */

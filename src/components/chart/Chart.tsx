@@ -3,10 +3,10 @@ import GitHubCalendar from "react-github-calendar";
 
 interface Props {
   color: string;
+  github_username: string;
 }
 
-function Chart({ color }: Props) {
-  console.log("here", color);
+function Chart({ color, github_username }: Props) {
   return (
     <main className="chart container" id="chart">
       <div className="chart__wrapper">
@@ -15,10 +15,12 @@ function Chart({ color }: Props) {
             <h2>GitHub Contributions</h2>
           </div>
           <div className="chart__calendar">
-            <GitHubCalendar
-              username="mshahanwaz"
-              color={color ? color : "#8bffb2"}
-            />
+            {github_username && (
+              <GitHubCalendar
+                username={github_username}
+                color={color ? color : "#8bffb2"}
+              />
+            )}
           </div>
         </div>
       </div>

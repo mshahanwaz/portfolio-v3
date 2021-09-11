@@ -9,7 +9,15 @@ Let's start!
 ### Todo
 
 - [x] Header
-- [ ] ...
+- [x] Home
+- [x] About
+- [x] Project
+- [x] Work Experience
+- [x] Blogs
+- [x] Skills
+- [x] Github Chart
+- [x] Contact
+- [x] Footer
 
 ### Best Practices
 
@@ -18,7 +26,7 @@ Let's start!
 
 ### Fonts
 
-- [ ] Poppins
-- [ ] Railway
-- [ ] Antic Didone
-- [ ] Fira Code
+- [x] Poppins
+- [x] Railway
+- [x] Antic Didone
+- [x] Fira Code

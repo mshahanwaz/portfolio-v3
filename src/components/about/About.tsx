@@ -1,7 +1,14 @@
 import "./About.scss";
 import P1 from "../../assets/images/1.png";
 
-function About() {
+interface Props {
+  tags: Array<string>;
+  description: string;
+  resume: string;
+  social: any;
+}
+
+function About({ tags, description, resume, social }: Props) {
   return (
     <main className="about container" id="about">
       <div className="about__wrapper">
@@ -14,22 +21,21 @@ function About() {
             <p>Little bit</p>
             <h2>About me</h2>
             <ul>
-              <li>Developer</li>
-              <li>|</li>
-              <li>Designer</li>
-              <li>|</li>
-              <li>Creator</li>
+              <li>{tags && tags[0]}</li>
+              {tags?.map(
+                (tag: string, i: number) =>
+                  i !== 0 && (
+                    <>
+                      <li key={i + tag}>|</li>
+                      <li key={tag}>{tag}</li>
+                    </>
+                  )
+              )}
             </ul>
-            <p>
-              Hello there, my name is <strong>Mohammad Shahanwaz ✌️</strong> and
-              I am Delhi-based software engineer who is specialised in building
-              exceptional digital experiences. I build things not entirely with
-              code but also with <strong>emotions</strong> &{" "}
-              <strong>coffee ☕</strong>.
-            </p>
+            <p>{description}</p>
             <div className="about__social">
               <a
-                href="https://github.com/mshahanwaz"
+                href={resume}
                 target="_blank"
                 rel="noreferrer noopener"
                 title="Resume"
@@ -37,27 +43,27 @@ function About() {
                 <i className="bi bi-file-earmark-arrow-down"></i>
               </a>
               <a
-                href="https://instagram.com/imshahanwaz"
+                href={social?.instagram}
                 target="_blank"
                 rel="noreferrer noopener"
-                title="@imshahanwaz"
+                title={`@${social?.instagram}`}
               >
                 <span className="dot"></span>
                 <i className="bi bi-instagram"></i>
               </a>
               <a
-                href="https://github.com/mshahanwaz"
+                href={social?.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                title="@mshahanwaz"
+                title={`@${social?.github}`}
               >
                 <i className="bi bi-github"></i>
               </a>
               <a
-                href="https://github.com/mshahanwaz"
+                href={social?.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
-                title="@mshahanwaz"
+                title={`@${social?.linkedin}`}
               >
                 <i className="bi bi-linkedin"></i>
               </a>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import "./App.scss";
 import About from "./components/about/About";
 import Blogs from "./components/blog/Blogs";
@@ -14,6 +15,17 @@ function App() {
   const [open, setOpen] = useState<number>(0);
   const [show, setShow] = useState<number>(0);
   const [color, setColor] = useState<string>("");
+  const [data, setData] = useState<any>({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios
+        .get("/data.json")
+        .then((res) => setData(res.data))
+        .catch((err) => console.log(err.message));
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className="app">
@@ -30,14 +42,25 @@ function App() {
           setShow(show > 0 ? 2 : 0);
         }}
       >
-        <Home />
-        <About />
+        <Home name={data.name} />
+        <About
+          tags={data.tags}
+          description={data.description}
+          resume={data.resume}
+          social={data.social}
+        />
         <Projects />
         <Works />
         <Blogs />
-        <Skills />
-        <Chart color={color} />
-        <Contact />
+        <Skills skills={data.skills} />
+        <Chart color={color} github_username={data.github_username} />
+        <Contact
+          created_by={data.created_by}
+          social={data.social}
+          email={data.email}
+          phone={data.phone}
+          support_me={data.support_me}
+        />
       </div>
     </div>
   );

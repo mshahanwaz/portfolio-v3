@@ -100,3 +100,21 @@ span {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }
+
+.button_link {
+  display: block;
+  padding: 0.7rem 3rem;
+  margin: 20px 0;
+  background-color: transparent;
+  width: fit-content;
+  color: $color-grey;
+  border: 2px solid $color-grey;
+  border-radius: 500px;
+  cursor: pointer;
+  outline: none;
+  font: 600 0.8rem $font-secondary;
+  text-transform: uppercase;
+  &:hover {
+    border-color: $color-tertiary;
+  }
+}

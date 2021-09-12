@@ -1,3 +1,4 @@
+import moment from "moment";
 import { Dispatch, SetStateAction } from "react";
 import "./Project.scss";
 
@@ -7,10 +8,11 @@ interface Props {
   setOpen: Dispatch<SetStateAction<Array<boolean>>>;
   setPrevious: Dispatch<SetStateAction<number>>;
   previous: number;
+  project: any;
 }
 
 function Project(props: Props) {
-  const { open, setOpen, setPrevious, previous, index } = props;
+  const { open, setOpen, setPrevious, previous, index, project } = props;
 
   const handleOpen = () => {
     if (previous !== index) setPrevious(index);
@@ -33,12 +35,14 @@ function Project(props: Props) {
                   : "var(--color-primary)",
               }}
             >
-              Title - Very Big And Sophisticated
+              {project.title}
             </h3>
-            <span>22 Sept, 2021</span>
+            <span>
+              {moment.unix(project.date.seconds).format("DD MMM YYYY")}
+            </span>
           </div>
           <div className="project__icons">
-            <a href="/#op">
+            <a href={project.github}>
               <i className="bi bi-github"></i>
             </a>
             <button>
@@ -55,19 +59,15 @@ function Project(props: Props) {
         </div>
         <div className="project__detail">
           <div className="project__whom">
-            <h4>P2L Impact Company Pvt. Ltd.</h4>
+            <h4>{project.subtitle}</h4>
           </div>
           <div className="project__description">
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptates, nostrum est neque ratione magnam quod animi
-              consectetur tempora ut quisquam?
-            </p>
+            <p>{project.description}</p>
           </div>
           <div className="project__tags">
-            <span>ReactJS</span>
-            <span>Firebase</span>
-            <span>Fake Store API</span>
+            {project.tags.map((tag: string, i: number) => (
+              <span key={i}>{tag}</span>
+            ))}
           </div>
         </div>
       </div>

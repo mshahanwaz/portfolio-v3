@@ -8,10 +8,11 @@ interface Props {
   setOpen: Dispatch<SetStateAction<Array<boolean>>>;
   setPrevious: Dispatch<SetStateAction<number>>;
   previous: number;
+  work: any;
 }
 
 function Work(props: Props) {
-  const { open, setOpen, setPrevious, previous, index } = props;
+  const { open, setOpen, setPrevious, previous, index, work } = props;
 
   const handleOpen = () => {
     if (previous !== index) setPrevious(index);
@@ -39,7 +40,7 @@ function Work(props: Props) {
                 : "var(--color-primary)",
             }}
           >
-            Title - Very Big And Sophisticated
+            {work.title}
           </h3>
           {open[index] ? (
             <i

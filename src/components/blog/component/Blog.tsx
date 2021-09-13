@@ -1,28 +1,36 @@
+import moment from "moment";
 import "./Blog.scss";
-import W1 from "../../../assets/images/w-1.png";
 
-function Blog() {
+interface Props {
+  image: string;
+  title: string;
+  date: any;
+  description: string;
+  tags: Array<string>;
+  link: string;
+}
+
+function Blog({ image, title, date, description, tags, link }: Props) {
   return (
     <div className="blog">
       <div className="blog__wrapper">
         <div className="blog__image">
-          <a href="/#">
-            <img src={W1} alt="" />
+          <a href={link}>
+            <img src={image} alt="" />
           </a>
         </div>
         <div className="blog__details">
-          <span>21 Sept, 2021</span>
-          <a href="/#">
-            <h3 className="h-3">Title - Very Big</h3>
+          <span>{moment.unix(date.seconds).format("DD MMM, YYYY")}</span>
+          <a href={link}>
+            <h3 className="h-3">{title}</h3>
           </a>
-          <p className="para">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit Ullam
-            suscipit, alias.
-          </p>
+          <p className="para">{description}</p>
           <div className="blog__tags">
-            <span className="tag">ReactJS</span>
-            <span className="tag">Firebase</span>
-            <span className="tag">Fake Store API</span>
+            {tags.map((tag, i) => (
+              <span key={i} className="tag">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </div>

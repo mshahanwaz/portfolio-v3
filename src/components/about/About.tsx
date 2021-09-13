@@ -1,5 +1,6 @@
 import "./About.scss";
 import P1 from "../../assets/images/1.png";
+import { Fragment } from "react";
 
 interface Props {
   tags: Array<string>;
@@ -25,10 +26,10 @@ function About({ tags, description, resume, social }: Props) {
               {tags?.map(
                 (tag: string, i: number) =>
                   i !== 0 && (
-                    <>
-                      <li key={i + tag}>|</li>
-                      <li key={tag}>{tag}</li>
-                    </>
+                    <Fragment key={i}>
+                      <li>|</li>
+                      <li>{tag}</li>
+                    </Fragment>
                   )
               )}
             </ul>

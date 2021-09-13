@@ -1,7 +1,6 @@
 import "./Projects.scss";
 import Project from "./component/Project";
 import { useEffect, useState } from "react";
-// import axios from "axios";
 import db from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -48,16 +47,20 @@ function Projects() {
           <section className="projects__section">
             <h2>Featured Projects</h2>
             <div className="projects__previewImage">
-              <a href="/#cool" target="_blank" rel="noreferror noopener">
+              <a
+                href={projects[previous]?.link}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 <i className="bi bi-arrow-up-right-square"></i>
               </a>
               <img
                 src={
                   previous === 0
-                    ? projects[0]?.image //https://firebasestorage.googleapis.com/v0/b/mshahanwaz-v2.appspot.com/o/portfolio.png?alt=media&token=1371d0e5-8446-4dcc-ad30-833076fc968d
+                    ? projects[0]?.image
                     : previous === 1
-                    ? projects[1]?.image //https://firebasestorage.googleapis.com/v0/b/mshahanwaz-v2.appspot.com/o/amazon.png?alt=media&token=e19740a3-e153-4382-9f88-ea2dbcc61232
-                    : projects[2]?.image //https://github.com/mshahanwaz/netflix-build/blob/master/screenshots/3.jpeg
+                    ? projects[1]?.image
+                    : projects[2]?.image
                 }
                 alt=""
               />

@@ -38,7 +38,7 @@ function Project(props: Props) {
               {project.title}
             </h3>
             <span>
-              {moment.unix(project.date.seconds).format("DD MMM YYYY")}
+              {moment.unix(project.date.seconds).format("DD MMM, YYYY")}
             </span>
           </div>
           <div className="project__icons">

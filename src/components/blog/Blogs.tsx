@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import db from "../../firebase";
 import "./Blogs.scss";
 import Blog from "./component/Blog";
+import { Link } from "react-router-dom";
 
 function Blogs() {
   const [blogs, setBlogs] = useState<Array<any>>([]);
@@ -42,7 +43,9 @@ function Blogs() {
             )}
           </div>
           <div className="blogs__button">
-            <button>Explore</button>
+            <Link to="/blogs" className="button_link">
+              Explore
+            </Link>
           </div>
         </div>
       </div>

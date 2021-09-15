@@ -3,6 +3,7 @@ import Project from "./component/Project";
 import { useEffect, useState } from "react";
 import db from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 function Projects() {
   const [open, setOpen] = useState<Array<boolean>>([true, false, false]);
@@ -41,7 +42,9 @@ function Projects() {
                 )
             )}
             <div className="projects__button">
-              <button className="button">Explore</button>
+              <Link to="/projects" className="button_link">
+                Explore
+              </Link>
             </div>
           </section>
           <section className="projects__section">

@@ -1,21 +1,23 @@
 @import "../../../utils/vars.scss";
 
 .blog {
-  margin: 20px;
+  margin: 20px 10px;
   color: $color-primary;
-  border: 1px solid $color-primary;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .blog__wrapper {
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid $color-primary;
   display: flex;
   flex-direction: column;
   .blog__image {
-    a {
+    img {
       width: 100%;
-      img {
-        width: 100%;
-        border-bottom: 1px solid $color-primary;
-      }
+      border-bottom: 1px solid $color-primary;
     }
   }
   .blog__details {

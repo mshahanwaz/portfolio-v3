@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import About from "./components/about/About";
 import Blogs from "./components/blog/Blogs";
@@ -28,41 +29,53 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Header
-        open={open}
-        setOpen={setOpen}
-        setColor={setColor}
-        show={show}
-        setShow={setShow}
-      />
-      <div
-        onClick={(_) => {
-          setOpen(open > 0 ? 2 : 0);
-          setShow(show > 0 ? 2 : 0);
-        }}
-      >
-        <Home name={data.name} />
-        <About
-          tags={data.tags}
-          description={data.description}
-          resume={data.resume}
-          social={data.social}
-        />
-        <Projects />
-        <Works />
-        <Blogs />
-        <Skills skills={data.skills} />
-        <Chart color={color} github_username={data.github_username} />
-        <Contact
-          created_by={data.created_by}
-          social={data.social}
-          email={data.email}
-          phone={data.phone}
-          support_me={data.support_me}
-        />
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/projects">
+          projects
+        </Route>
+        <Route exact path="/blogs">
+          blogs
+        </Route>
+        <Route path="/">
+          <div className="app">
+            <Header
+              open={open}
+              setOpen={setOpen}
+              setColor={setColor}
+              show={show}
+              setShow={setShow}
+            />
+            <div
+              onClick={(_) => {
+                setOpen(open > 0 ? 2 : 0);
+                setShow(show > 0 ? 2 : 0);
+              }}
+            >
+              <Home name={data.name} />
+              <About
+                tags={data.tags}
+                description={data.description}
+                resume={data.resume}
+                social={data.social}
+              />
+              <Projects />
+              <Works />
+              <Blogs />
+              <Skills skills={data.skills} />
+              <Chart color={color} github_username={data.github_username} />
+              <Contact
+                created_by={data.created_by}
+                social={data.social}
+                email={data.email}
+                phone={data.phone}
+                support_me={data.support_me}
+              />
+            </div>
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

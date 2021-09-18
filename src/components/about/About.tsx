@@ -1,5 +1,4 @@
 import "./About.scss";
-import P1 from "../../assets/images/1.png";
 import { Fragment } from "react";
 
 interface Props {
@@ -7,16 +6,17 @@ interface Props {
   description: string;
   resume: string;
   social: any;
+  image: string;
 }
 
-function About({ tags, description, resume, social }: Props) {
+function About({ image, tags, description, resume, social }: Props) {
   return (
     <main className="about container" id="about">
       <div className="about__wrapper">
         <div className="about__media">
           <div className="about__pic">
             <span></span>
-            <img src={P1} alt="" />
+            <img src={image} alt="" />
           </div>
           <div className="about__text">
             <p>Little bit</p>

@@ -118,3 +118,16 @@ span {
     border-color: $color-tertiary;
   }
 }
+
+.wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 20px;
+  & > a i {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+}

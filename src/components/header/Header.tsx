@@ -7,8 +7,8 @@ interface Props {
   show: number;
   open: number;
   setOpen: Dispatch<SetStateAction<number>>;
-  setColor: Dispatch<SetStateAction<string>>;
   setShow: Dispatch<SetStateAction<number>>;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
 function Header({ open, show, setOpen, setColor, setShow }: Props) {

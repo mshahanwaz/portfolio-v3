@@ -2,13 +2,13 @@ import moment from "moment";
 import { useEffect, useState } from "react";
 import "./Home.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import P1 from "../../assets/images/1.png";
 
 interface Props {
   name: string;
+  image: string;
 }
 
-function Home({ name }: Props) {
+function Home({ name, image }: Props) {
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function Home({ name }: Props) {
             <p>{name}.</p>
           </div>
           <div className="home__pics">
-            <img src={P1} alt="" />
+            <img src={image} alt="" />
           </div>
         </div>
         <div className="home__left">{time}</div>

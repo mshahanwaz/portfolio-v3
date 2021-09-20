@@ -1,5 +1,5 @@
 import { collection, getDocs } from "@firebase/firestore";
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import db from "../../firebase";
 import "./AllProjects.scss";
 import EachProject from "./component/EachProject";
@@ -32,7 +32,7 @@ function AllProjects({ setOpen, setShow }: Props) {
         <Link to="/">
           <i className="bi bi-arrow-left-circle" />
         </Link>
-        <div className="allProjects__projects">
+        <div>
           {projects?.map((project, i) => (
             <EachProject project={project} key={i} />
           ))}

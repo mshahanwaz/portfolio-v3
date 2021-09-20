@@ -7,7 +7,6 @@ interface Props {
 }
 
 function EachProject({ project }: Props) {
-  // console.log(project);
   const { image, date, title, subtitle, github, link, description, tags } =
     project;
   return (

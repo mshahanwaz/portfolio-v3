@@ -1,0 +1,54 @@
+@import "../../../utils/vars.scss";
+
+.fullBlog {
+  background-color: $color-secondary;
+  min-height: 100vh;
+  color: $color-primary;
+  img {
+    width: 100%;
+    margin: 50px 0;
+  }
+  .fullBlog__details {
+    .fullBlog__head {
+      margin-bottom: 20px;
+      h2 {
+        margin-bottom: 20px;
+      }
+      span {
+        margin: 5px 0;
+        color: $color-grey;
+        font: 400 1rem $font-code;
+      }
+    }
+  }
+  .fullBlog__tags {
+    margin-bottom: 50px;
+    font-family: $font-code;
+    span {
+      color: $color-grey;
+      border: 2px dashed $color-grey;
+      display: inline-block;
+      padding: 10px;
+      &:not(&:last-child) {
+        margin-right: 20px;
+      }
+      &:hover {
+        color: $color-tertiary;
+        border-color: $color-tertiary;
+      }
+    }
+  }
+  .fullBlog__description {
+    padding-bottom: 20px;
+    font: 400 1.5rem $font-secondary;
+    border-bottom: 1px solid $color-tertiary;
+    &::before {
+      content: "> ";
+    }
+  }
+  .fullBlog__blog {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+    padding-top: 20px;
+  }
+}

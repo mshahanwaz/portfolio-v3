@@ -2,6 +2,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Menubar from "../menubar/Menubar";
 import Sidebar from "../sidebar/Sidebar";
 import "./Header.scss";
+import { Link } from "react-router-dom";
 
 interface Props {
   show: number;
@@ -13,13 +14,25 @@ interface Props {
 
 function Header({ open, show, setOpen, setColor, setShow }: Props) {
   const [showBurger, setShowBurger] = useState(false);
+
+  const handleResize = () => {
+    if (window.screen.width < 900) setShowBurger(true);
+    else if (window.scrollY < 200) setShowBurger(false);
+  };
+
+  const handleScroll = () => {
+    if (window.scrollY > 200) setShowBurger(true);
+    else if (window.screen.width > 900) setShowBurger(false);
+  };
+
   useEffect(() => {
-    window.onscroll = (e) => {
-      if (window.scrollY > 200 || window.innerWidth < 900) setShowBurger(true);
-      else setShowBurger(false);
-    };
-    window.onresize = (e) => {
-      console.log(e);
+    handleResize();
+    handleScroll();
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -38,26 +51,16 @@ function Header({ open, show, setOpen, setColor, setShow }: Props) {
               <i className="bi bi-list-nested" />
             </div>
           ) : (
-            <a href="/#">M. Shahanwaz</a>
+            <Link to="/">M. Shahanwaz</Link>
           )}
         </div>
         {!showBurger && (
           <div className="header__links">
-            <div className="header__link">
-              <a href="/#about">About</a>
-            </div>
-            <div className="header__link">
-              <a href="/#projects">Projects</a>
-            </div>
-            <div className="header__link">
-              <a href="/#workexp">Work Exp.</a>
-            </div>
-            <div className="header__link">
-              <a href="/#blogs">Blogs</a>
-            </div>
-            <div className="header__link">
-              <a href="/#findme">Find Me</a>
-            </div>
+            <a href="/#about">About</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#workexp">Work Exp.</a>
+            <a href="/#blogs">Blogs</a>
+            <a href="/#findme">Find Me</a>
           </div>
         )}
         <div className="header__toggle">
@@ -67,10 +70,11 @@ function Header({ open, show, setOpen, setColor, setShow }: Props) {
               setOpen(1);
               if (show === 1) setShow(2);
             }}
-            name="toggler"
             id="toggler"
           />
-          <label htmlFor="toggler"></label>
+          <label htmlFor="toggler">
+            <span className="toggle"></span>
+          </label>
         </div>
       </nav>
       <Sidebar open={open} setOpen={setOpen} setColor={setColor} />

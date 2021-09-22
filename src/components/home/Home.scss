@@ -19,7 +19,7 @@
 }
 
 .home__media {
-  font-family: $font-tertiary;
+  font-family: $font-secondary;
   width: 60%;
   height: 65%;
   position: relative;
@@ -32,7 +32,7 @@
     justify-content: center;
     flex-direction: column;
     p {
-      font-family: $font-tertiary;
+      font-family: $font-secondary;
       font-size: 8rem;
       width: fit-content;
     }

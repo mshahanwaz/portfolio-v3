@@ -13,12 +13,14 @@ interface Props {
 
 function Header({ open, show, setOpen, setColor, setShow }: Props) {
   const [showBurger, setShowBurger] = useState(false);
-
   useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      if (window.scrollY > 200) setShowBurger(true);
+    window.onscroll = (e) => {
+      if (window.scrollY > 200 || window.innerWidth < 900) setShowBurger(true);
       else setShowBurger(false);
-    });
+    };
+    window.onresize = (e) => {
+      console.log(e);
+    };
   }, []);
 
   return (

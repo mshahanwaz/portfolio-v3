@@ -57,7 +57,7 @@ button {
   border-radius: 500px;
   cursor: pointer;
   outline: none;
-  font-family: $font-secondary;
+  font-family: $font-primary;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -74,7 +74,7 @@ h3 {
 h2 {
   font-size: 3rem;
   font-weight: 400;
-  font-family: $font-tertiary;
+  font-family: $font-secondary;
 }
 
 h3 {
@@ -112,7 +112,7 @@ span {
   border-radius: 500px;
   cursor: pointer;
   outline: none;
-  font: 600 0.8rem $font-secondary;
+  font: 600 0.8rem $font-primary;
   text-transform: uppercase;
   &:hover {
     border-color: $color-tertiary;

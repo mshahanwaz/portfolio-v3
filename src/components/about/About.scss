@@ -5,7 +5,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  font-family: $font-secondary;
+  font-family: $font-primary;
 }
 
 .about__wrapper {
@@ -69,7 +69,7 @@
       font-family: $font-primary;
     }
     h2 {
-      font-family: $font-tertiary;
+      font-family: $font-secondary;
       font-size: 3rem;
       font-weight: 400;
       width: fit-content;
@@ -95,7 +95,7 @@
       margin-bottom: 20px;
       font-family: $font-primary;
       strong {
-        font-family: $font-secondary;
+        font-family: $font-primary;
         font-weight: 600;
       }
     }

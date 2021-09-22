@@ -22,8 +22,6 @@ function Works() {
     fetchWorks();
   }, []);
 
-  console.log(works);
-
   return (
     <main className="works container" id="workexp">
       <div className="works__wrapper">

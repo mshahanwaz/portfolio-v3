@@ -69,14 +69,14 @@ function App() {
               }}
             >
               <Home image={data.image} name={data.name} />
-              {/* <About
+              <About
                 image={data.image}
                 tags={data.tags}
                 description={data.description}
                 resume={data.resume}
                 social={data.social}
               />
-              <Projects />
+              {/* <Projects />
               <Works />
               <Blogs />
               <Skills skills={data.skills} />

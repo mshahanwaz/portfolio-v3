@@ -24,7 +24,7 @@ function Menubar({ show, setShow }: Props) {
       </div>
       <div className="menubar__options">
         <div className="menubar__link">
-          <Link to="/">Home</Link>
+          <a href="/#">Home</a>
         </div>
         <div className="menubar__link">
           <a href="/#about">About</a>

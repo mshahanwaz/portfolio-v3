@@ -73,19 +73,19 @@ h3 {
 
 h2 {
   font-size: 3rem;
-  font-weight: 400;
+  // font-weight: 400;
   font-family: $font-secondary;
 }
 
 h3 {
-  font-weight: 400;
-  font-family: $font-primary;
+  // font-weight: 400;
+  font-family: $font-secondary;
   font-size: 1.1rem;
 }
 
 h4 {
-  font-family: $font-primary;
-  font-weight: 500;
+  font-family: $font-secondary;
+  // font-weight: 500;
 }
 
 img,
@@ -135,4 +135,23 @@ span {
 .give-bg {
   background-color: $color-tertiary;
   color: $color-secondary;
+}
+
+.component-wrapper {
+  max-width: $max-width;
+  width: 100%;
+  height: calc(100vh - 100px);
+  // background-color: blueviolet;
+  padding: 0 20px;
+  color: $color-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.component-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

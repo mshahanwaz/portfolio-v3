@@ -11,15 +11,14 @@ interface Props {
 
 function About({ image, tags, description, resume, social }: Props) {
   return (
-    <main className="about container" id="about">
-      <div className="about__wrapper">
+    <main className="about component-container container" id="about">
+      <div className="about__wrapper component-wrapper">
         <div className="about__media">
           <div className="about__pic">
             <span></span>
             <img src={image} alt="" />
           </div>
           <div className="about__text">
-            <p>Little bit</p>
             <h2>About me</h2>
             <ul>
               <li>{tags && tags[0]}</li>
@@ -27,7 +26,7 @@ function About({ image, tags, description, resume, social }: Props) {
                 (tag: string, i: number) =>
                   i !== 0 && (
                     <Fragment key={i}>
-                      <li>|</li>
+                      <li className="dash">|</li>
                       <li>{tag}</li>
                     </Fragment>
                   )
@@ -47,7 +46,7 @@ function About({ image, tags, description, resume, social }: Props) {
                 href={social?.instagram}
                 target="_blank"
                 rel="noreferrer noopener"
-                title={`@${social?.instagram}`}
+                title={social?.instagram}
               >
                 <span className="dot"></span>
                 <i className="bi bi-instagram"></i>
@@ -56,7 +55,7 @@ function About({ image, tags, description, resume, social }: Props) {
                 href={social?.github}
                 target="_blank"
                 rel="noreferrer noopener"
-                title={`@${social?.github}`}
+                title={social?.github}
               >
                 <i className="bi bi-github"></i>
               </a>
@@ -64,7 +63,7 @@ function About({ image, tags, description, resume, social }: Props) {
                 href={social?.linkedin}
                 target="_blank"
                 rel="noreferrer noopener"
-                title={`@${social?.linkedin}`}
+                title={social?.linkedin}
               >
                 <i className="bi bi-linkedin"></i>
               </a>

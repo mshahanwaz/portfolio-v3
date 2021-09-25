@@ -19,8 +19,8 @@ function Home({ name, image }: Props) {
   }, [time]);
 
   return (
-    <main className="home container">
-      <div className="home__wrapper">
+    <main className="component-container container">
+      <div className="component-wrapper">
         <div className="home__media">
           <div className="home__text">
             <p>Hi, I am</p>

@@ -1,26 +1,8 @@
 @import "../../utils/vars.scss";
 
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home__wrapper {
-  max-width: $max-width;
-  width: 100%;
-  height: calc(100vh - 100px);
-  padding: 0 20px;
-  color: $color-primary;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .home__media {
   font-family: $font-secondary;
-  max-width: 1000px;
+  max-width: $mx-1;
   width: 100%;
   height: 80%;
   position: relative;

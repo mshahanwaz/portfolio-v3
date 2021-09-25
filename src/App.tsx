@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import About from "./components/about/About";
 import Blogs from "./components/blog/Blogs";
-import Chart from "./components/chart/Chart";
 import Contact from "./components/contact/Contact";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
@@ -76,18 +75,17 @@ function App() {
                 resume={data.resume}
                 social={data.social}
               />
-              {/* <Projects />
+              <Projects />
               <Works />
               <Blogs />
               <Skills skills={data.skills} />
-              <Chart color={color} github_username={data.github_username} />
               <Contact
                 created_by={data.created_by}
                 social={data.social}
                 email={data.email}
                 phone={data.phone}
                 support_me={data.support_me}
-              /> */}
+              />
             </div>
           </div>
         </Route>

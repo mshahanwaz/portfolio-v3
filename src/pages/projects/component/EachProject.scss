@@ -28,15 +28,15 @@
       }
       & > span {
         margin: 5px 0;
-        color: $color-grey;
+        color: $color-lightgrey;
         font: 400 1rem $font-code;
       }
     }
     .eachProject__tags {
       font-family: $font-code;
       span {
-        color: $color-grey;
-        border: 1px dashed $color-grey;
+        color: $color-lightgrey;
+        border: 1px dashed $color-lightgrey;
         display: inline-block;
         padding: 5px 10px;
         font-size: 0.8rem;

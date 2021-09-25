@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: column;
     span {
-      color: $color-grey;
+      color: $color-lightgrey;
       font-weight: 500;
       font-family: $font-code;
     }
@@ -52,8 +52,8 @@
   .project__tags {
     font-family: $font-code;
     span {
-      color: $color-grey;
-      border: 2px dashed $color-grey;
+      color: $color-lightgrey;
+      border: 2px dashed $color-lightgrey;
       display: inline-block;
       padding: 5px 10px;
       margin-top: 10px;

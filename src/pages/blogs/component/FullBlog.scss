@@ -16,7 +16,7 @@
       }
       span {
         margin: 5px 0;
-        color: $color-grey;
+        color: $color-lightgrey;
         font: 400 1rem $font-code;
       }
     }
@@ -25,8 +25,8 @@
     margin-bottom: 50px;
     font-family: $font-code;
     span {
-      color: $color-grey;
-      border: 2px dashed $color-grey;
+      color: $color-lightgrey;
+      border: 2px dashed $color-lightgrey;
       display: inline-block;
       padding: 10px;
       &:not(&:last-child) {

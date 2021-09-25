@@ -66,7 +66,7 @@
               align-items: flex-start;
               padding: 15px 0 0 0;
               i {
-                color: $color-grey;
+                color: $color-lightgrey;
                 font-size: 1rem;
                 margin-right: 10px;
               }
@@ -79,7 +79,7 @@
             ul {
               display: flex;
               li {
-                color: $color-grey;
+                color: $color-lightgrey;
                 font-family: $font-code;
                 font-weight: 500;
                 &:not(&:first-child) {

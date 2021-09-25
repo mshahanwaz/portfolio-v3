@@ -4,11 +4,10 @@
   width: 100%;
   max-width: 400px;
   height: 100vh;
-  background-color: $color-primary;
+  background: $color-secondary;
+  border: 2px solid $color-tertiary;
   position: absolute;
-  top: 0;
-  padding: 0 30px;
-  z-index: 5;
+  top: -2px;
 }
 
 .show-seek {
@@ -44,30 +43,41 @@
 }
 
 .sidebar__head {
-  color: black !important;
+  color: $color-tertiary;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20vh;
   p {
-    font-size: 1rem;
+    padding: 20px;
+    font-size: 1.3rem;
     font-family: $font-primary;
+    flex: 1;
+    text-align: center;
   }
   i {
+    padding: 20px;
     font-size: 2rem;
+    border-left: 2px solid $color-tertiary;
     cursor: pointer;
   }
+  i:hover {
+    background-color: $color-tertiary;
+    color: $color-secondary;
+  }
+  margin-bottom: 20px;
+  border-bottom: 2px solid $color-tertiary;
 }
 
 .sidebar__colors {
   display: flex;
+  gap: 20px;
+  padding: 0 20px;
   flex-wrap: wrap;
   .sidebar__color {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
-    margin: 10px;
-    border: 2px solid $color-secondary;
+    border: 2px solid $color-primary;
     cursor: pointer;
     position: relative;
     span {
@@ -78,6 +88,10 @@
       width: 80%;
       height: 80%;
       border-radius: inherit;
+      transition: all 0.5s cubic-bezier(0.59, -0.5, 1, 0.11);
+    }
+    &:hover {
+      background-color: $color-primary;
     }
   }
 }

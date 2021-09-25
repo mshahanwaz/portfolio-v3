@@ -8,9 +8,16 @@ $font-code: "Fira Code", monospace;
   --color-primary: #fff;
   --color-secondary: #141414;
   --color-tertiary: #8bffb2;
-  --color-grey: #c2c2c2;
+  --color-grey: #242424;
 }
 $color-primary: var(--color-primary);
 $color-secondary: var(--color-secondary);
 $color-tertiary: var(--color-tertiary);
 $color-grey: var(--color-grey);
+
+// width
+$max-width: 1400px;
+$mx-1: 1000px;
+$mx-2: 600px;
+$mx-3: 400px;
+$mx-4: 270px;

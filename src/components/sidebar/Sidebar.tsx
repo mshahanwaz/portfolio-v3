@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import "./Sidebar.scss";
 
 interface Props {
@@ -7,19 +7,48 @@ interface Props {
   setColor: Dispatch<SetStateAction<string>>;
 }
 
-const colors = ["#fdff8b", "#df5900", "#ff8b8b", "#d48bff", "#ff8bc9"];
+const colors = [
+  "#fdff8b",
+  "#df5900",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+  "#fdff8b",
+  "#df5900",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+  "#fdff8b",
+  "#df5900",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#ff8b8b",
+  "#d48bff",
+  "#ff8bc9",
+];
 
 function Sidebar({ open, setOpen, setColor }: Props) {
+  const [currentColor, setCurrentColor] = useState("");
+
   const handleColor = (color: string) => {
     const root = document.documentElement;
     root.style.setProperty("--color-tertiary", color);
     setColor(color);
-    setOpen(2);
+    setCurrentColor(color);
   };
 
   useEffect(() => {
     const root =
       document.documentElement.style.getPropertyValue("--color-tertiary");
+    setCurrentColor(root);
     if (root) setColor(root);
   }, [setColor]);
 
@@ -35,10 +64,22 @@ function Sidebar({ open, setOpen, setColor }: Props) {
       </div>
       <div className="sidebar__colors">
         {colors.map((color: string, i: number) => (
-          <span key={i} className="sidebar__color">
+          <span
+            style={{
+              backgroundColor:
+                currentColor === color ? "var(--color-tertiary)" : "",
+              border: currentColor === color ? "none" : "",
+            }}
+            key={i}
+            onClick={(_) => handleColor(color)}
+            className="sidebar__color"
+          >
             <span
-              onClick={(_) => handleColor(color)}
-              style={{ backgroundColor: color }}
+              style={{
+                backgroundColor: color,
+                width: currentColor === color ? "100%" : "80%",
+                height: currentColor === color ? "100%" : "80%",
+              }}
               title={color}
             ></span>
           </span>

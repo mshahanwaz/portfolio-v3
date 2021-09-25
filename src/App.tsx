@@ -69,7 +69,7 @@ function App() {
               }}
             >
               <Home image={data.image} name={data.name} />
-              <About
+              {/* <About
                 image={data.image}
                 tags={data.tags}
                 description={data.description}
@@ -87,7 +87,7 @@ function App() {
                 email={data.email}
                 phone={data.phone}
                 support_me={data.support_me}
-              />
+              /> */}
             </div>
           </div>
         </Route>

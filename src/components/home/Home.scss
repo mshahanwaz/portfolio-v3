@@ -3,13 +3,13 @@
 .home {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .home__wrapper {
-  max-width: 1600px;
+  max-width: $max-width;
   width: 100%;
-  height: 80%;
-  margin: 0 auto;
+  height: calc(100vh - 100px);
   padding: 0 20px;
   color: $color-primary;
   display: flex;
@@ -20,12 +20,13 @@
 
 .home__media {
   font-family: $font-secondary;
-  width: 60%;
-  height: 65%;
+  max-width: 1000px;
+  width: 100%;
+  height: 80%;
   position: relative;
   .home__text {
     position: relative;
-    z-index: 4;
+    z-index: 2;
     width: 100%;
     height: 100%;
     display: flex;
@@ -33,8 +34,8 @@
     flex-direction: column;
     p {
       font-family: $font-secondary;
-      font-size: 8rem;
-      width: fit-content;
+      font-size: 9rem;
+      font-weight: 700;
     }
     p:nth-child(2) {
       align-self: flex-end;
@@ -46,11 +47,11 @@
     height: 100%;
     top: 0;
     img {
-      width: inherit;
-      height: inherit;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       position: absolute;
-      opacity: 0.6;
+      filter: brightness(0.4);
       top: 50%;
       left: 50%;
       z-index: 1;
@@ -59,23 +60,13 @@
   }
 }
 
-.home__left {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  transform: translateY(0%) rotate(180deg);
-  writing-mode: vertical-rl;
-  font-size: 1rem;
-  font-family: $font-code;
-  text-transform: uppercase;
-}
-
 .home__mouse {
   position: absolute;
-  left: 50%;
+  left: calc(50%-10px);
   bottom: 0;
   transform: translateX(-50%);
   animation: 1s move infinite alternate ease-in-out;
+  cursor: initial;
 }
 
 @keyframes move {
@@ -87,29 +78,46 @@
   }
 }
 
-.home__right {
-  position: absolute;
-  bottom: 0;
-  right: 20px;
-  transform: translateY(0%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  span {
-    height: 100px;
-    width: 1px;
-    background-color: $color-primary;
-    display: block;
-    margin: 10px 0;
+@media screen and (max-width: $mx-1) {
+  .home__text {
+    p {
+      font-size: 7rem !important;
+    }
+  }
+  .home__pics {
+    img {
+      width: 70% !important;
+      height: 70% !important;
+    }
   }
 }
 
-.home__786 {
-  writing-mode: vertical-rl;
-  font: 1rem $font-code;
-  letter-spacing: 5px;
-  color: $color-primary;
-  &:hover {
-    color: $color-tertiary;
+@media screen and (max-width: $mx-2) {
+  .home__text {
+    p {
+      font-size: 4.5rem !important;
+    }
+  }
+  .home__pics {
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+@media screen and (max-width: $mx-3) {
+  .home__text {
+    p {
+      font-size: 3.5rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: $mx-4) {
+  .home__text {
+    p {
+      font-size: 2rem !important;
+    }
   }
 }

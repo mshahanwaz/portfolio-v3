@@ -30,18 +30,9 @@ function Home({ name, image }: Props) {
             <img src={image} alt="" />
           </div>
         </div>
-        <div className="home__left">{time}</div>
-        <div className="home__mouse">
-          <a href="/#about">
-            <i className="bi bi-mouse"></i>
-          </a>
-        </div>
-        <div className="home__right">
-          <div className="home__786" title="786">
-            ۷۸۶
-          </div>
-          <span></span>
-        </div>
+        <a href="/#about" className="home__mouse">
+          <i className="bi bi-mouse"></i>
+        </a>
       </div>
     </main>
   );

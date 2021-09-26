@@ -1,20 +1,101 @@
 @import "../../../utils/vars.scss";
 
 .work {
-  // background-color: rgb(114, 64, 0);
+  width: inherit;
+}
+
+.open {
+  .work__detail {
+    display: block;
+    padding: 20px;
+    border-bottom: 2px solid $color-tertiary;
+  }
 }
 
 .work__head {
   padding: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  h3 {
-    margin-right: 40px;
-    
+  justify-content: space-between;
+  border-bottom: 2px solid $color-tertiary;
+  .work__title {
+    display: flex;
+    flex-direction: column;
+    span {
+      color: $color-lightgrey;
+      font: 500 0.8rem $font-code;
+    }
   }
-  i {
-    cursor: pointer;
-    display: block;
+  .work__icons {
+    display: flex;
+    align-items: center;
+    a {
+      cursor: pointer;
+      margin-right: 20px;
+      i {
+        font-size: 1.5rem;
+        &:hover {
+          color: unset;
+        }
+      }
+    }
+    button {
+      border: none;
+      padding: 1px;
+      color: $color-primary;
+    }
+    button:hover {
+      i {
+        color: unset;
+      }
+    }
+  }
+}
+
+.work__detail {
+  display: none;
+  .work__whom {
+    h4 {
+      margin-bottom: 5px;
+    }
+  }
+  .work__tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    span {
+      white-space: nowrap;
+      font-family: $font-code;
+      color: $color-lightgrey;
+      border: 1px dashed $color-lightgrey;
+      font-size: 0.8rem;
+      display: inline-block;
+      padding: 4px 8px;
+      margin-top: 10px;
+      &:not(&:last-child) {
+        margin-right: 10px;
+      }
+      &:hover {
+        color: $color-tertiary;
+        border-color: $color-tertiary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mx-2) {
+  .open {
+    .work__detail {
+      display: none;
+    }
+  }
+  .work__icons {
+    a {
+      margin-right: unset !important;
+      margin-left: 20px;
+    }
+    button {
+      display: none;
+    }
   }
 }

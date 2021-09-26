@@ -1,55 +1,95 @@
-// import { useState } from "react";
+import moment from "moment";
 import { Dispatch, SetStateAction } from "react";
 import "./Work.scss";
 
 interface Props {
   index: number;
-  open: Array<boolean>;
-  setOpen: Dispatch<SetStateAction<Array<boolean>>>;
-  setPrevious: Dispatch<SetStateAction<number>>;
-  previous: number;
+  open: number;
+  setOpen: Dispatch<SetStateAction<number>>;
   work: any;
 }
 
 function Work(props: Props) {
-  const { open, setOpen, setPrevious, previous, index, work } = props;
+  const { open, setOpen, index, work } = props;
 
   const handleOpen = () => {
-    if (previous !== index) setPrevious(index);
-    setOpen(
-      open.map((_, i) => {
-        return i === index ? !open[i] : false;
-      })
-    );
+    setOpen(index);
   };
 
   return (
-    <div className={`work ${open[index] && "open"}`}>
+    <div className={`work ${open === index && "open"}`}>
       <div className="work__wrapper">
         <div
           className="work__head"
-          style={{
-            borderTop: index > 0 ? "1px solid white" : "none",
-            borderRight: open[index] ? "none" : "1px solid white",
-          }}
+          onClick={() => handleOpen()}
+          style={
+            open === index
+              ? {
+                  backgroundColor: "var(--color-tertiary)",
+                }
+              : {}
+          }
         >
-          <h3
-            style={{
-              color: open[index]
-                ? "var(--color-tertiary)"
-                : "var(--color-primary)",
-            }}
-          >
-            {work.title}
-          </h3>
-          {open[index] ? (
-            <i
-              className="bi bi-caret-right-fill"
-              style={{ color: "var(--color-tertiary)" }}
-            ></i>
-          ) : (
-            <i className="bi bi-caret-right" onClick={handleOpen}></i>
-          )}
+          <div className="work__title">
+            <h3
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-tertiary)",
+              }}
+            >
+              {work.title}
+            </h3>
+            <span
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-lightgrey)",
+              }}
+            >
+              {moment.unix(work.date.start.seconds).format("DD MMM, YYYY")} -{" "}
+              {moment.unix(work.date.end.seconds).format("DD MMM, YYYY")}
+            </span>
+          </div>
+          <div className="work__icons">
+            <a
+              href={work?.link}
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+              }}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i className="bi bi-arrow-up-right-square"></i>
+            </a>
+            <button
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+              }}
+            >
+              {open === index ? (
+                <i className="bi bi-caret-up-fill"></i>
+              ) : (
+                <i className="bi bi-caret-down"></i>
+              )}
+            </button>
+          </div>
+        </div>
+        <div className="work__detail">
+          <div className="work__whom">
+            <h4>{work.subtitle}</h4>
+          </div>
+          <div className="work__description">
+            <p>{work.description}</p>
+          </div>
         </div>
       </div>
     </div>

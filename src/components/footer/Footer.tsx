@@ -12,7 +12,6 @@ function Footer({ created_by }: Props) {
           <p>
             Created by <a href="/#">{created_by}</a> 💎
           </p>
-          <p>2021 &copy; All rights reserved.</p>
         </div>
       </div>
     </footer>

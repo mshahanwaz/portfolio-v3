@@ -19,7 +19,6 @@ import AllProjects from "./pages/projects/AllProjects";
 function App() {
   const [open, setOpen] = useState<number>(0);
   const [show, setShow] = useState<number>(0);
-  const [color, setColor] = useState<string>("");
   const [data, setData] = useState<any>({});
   const [blogs, setBlogs] = useState<Array<any>>([]);
 
@@ -59,7 +58,6 @@ function App() {
               setOpen={setOpen}
               show={show}
               setShow={setShow}
-              setColor={setColor}
             />
             <div
               onClick={(_) => {
@@ -78,14 +76,14 @@ function App() {
               <Projects />
               <Works />
               <Blogs />
-              {/* <Skills skills={data.skills} /> */}
-              {/* <Contact
+              <Skills skills={data.skills} />
+              <Contact
                 created_by={data.created_by}
                 social={data.social}
                 email={data.email}
                 phone={data.phone}
                 support_me={data.support_me}
-              /> */}
+              />
             </div>
           </div>
         </Route>

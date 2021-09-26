@@ -1,28 +1,9 @@
 @import "../../utils/vars.scss";
 
-.skills {
-  // background-color: #0e93ff;
-  font-family: $font-code;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.skills__wrapper {
-  max-width: 1600px;
-  width: 100%;
-  height: 80%;
-  padding: 0 20px;
-  // background-color: blueviolet;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .skills__media {
-  width: 70%;
-  height: 70%;
+  max-width: $mx-1;
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -34,13 +15,20 @@
     justify-content: center;
     flex-wrap: wrap;
     span {
-      margin: 10px;
-      padding: 10px;
+      white-space: nowrap;
+      font-family: $font-code;
       color: $color-lightgrey;
-      border: 2px dashed $color-lightgrey;
+      border: 1px dashed $color-lightgrey;
+      font-size: 0.8rem;
+      display: inline-block;
+      padding: 4px 8px;
+      margin-top: 10px;
+      &:not(&:last-child) {
+        margin-right: 10px;
+      }
       &:hover {
-        border-color: $color-tertiary;
         color: $color-tertiary;
+        border-color: $color-tertiary;
       }
     }
   }

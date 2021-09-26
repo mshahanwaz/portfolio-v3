@@ -3,18 +3,19 @@
 .footer {
   width: inherit;
   position: absolute;
-  bottom: 40px;
+  bottom: -20px;
   margin: 0 auto;
   .footer__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     &::before,
     &::after {
       content: "";
       width: 100px;
-      height: 1px;
-      background-color: $color-primary;
+      height: 2px;
+      background-color: $color-tertiary;
     }
     &::before {
       margin-right: 40px;
@@ -23,19 +24,21 @@
       margin-left: 40px;
     }
     p {
+      white-space: nowrap;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $color-primary;
+      color: $color-lightgrey;
       font-family: $font-primary;
       font-weight: 300;
       a {
+        color: $color-primary;
         padding: 0 10px;
         font-weight: 700;
         font-family: $font-primary;
-      }
-      &:not(&:first-child) {
-        opacity: 0.8;
+        &:hover {
+          color: $color-tertiary;
+        }
       }
     }
   }

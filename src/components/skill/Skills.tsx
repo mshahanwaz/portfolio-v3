@@ -5,8 +5,8 @@ interface Props {
 }
 function Skills({ skills }: Props) {
   return (
-    <main className="skills container" id="skills">
-      <div className="skills__wrapper">
+    <main className="component-container container" id="skills">
+      <div className="component-wrapper">
         <div className="skills__media">
           <div>
             <h2>Skills & Tools</h2>

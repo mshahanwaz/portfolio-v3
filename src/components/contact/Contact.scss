@@ -1,72 +1,61 @@
 @import "../../utils/vars.scss";
 
-.contact {
-  // background-color: rgb(50, 100, 0);
-  font-family: $font-primary;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.contact__wrapper {
-  max-width: 1600px;
-  width: 100%;
-  height: 80%;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contact__media {
-  width: 70%;
-  height: 70%;
+  max-width: $mx-1-2;
+  width: 100%;
+  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   color: $color-primary;
+  border: 2px solid $color-tertiary;
   .contact__title {
-    h2 {
-      margin-bottom: 20px;
-    }
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid $color-tertiary;
   }
-  .contact__social {
-    width: 40%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    a {
-      &:not(&:first-child) {
-        margin-left: 40px;
-      }
-      i {
-        font-size: 2rem;
-      }
-    }
+  & > a {
+    border-top: 2px solid $color-tertiary;
   }
-  .contact__emailPhone {
+  form {
     width: inherit;
-    margin: 20px 0;
     display: flex;
-    justify-content: center;
-    .link {
-      display: flex;
-      align-items: center;
-      &:not(&:first-child) {
-        margin-left: 40px;
-      }
-      i {
-        margin-right: 10px;
-      }
+    justify-content: space-between;
+    overflow: auto;
+    input,
+    a {
+      padding: 20px;
+      outline: none;
+      border: none;
+      background-color: transparent;
     }
-  }
-  .contact__button {
-    margin-bottom: 20px;
-    button {
-      padding: 0.7rem 3rem;
-      margin: 20px 0;
+    .contact__email {
+      color: $color-lightgrey;
+      flex: 1;
+      min-width: 200px;
+      width: 100%;
+      font-family: $font-primary;
+      font-size: 1rem;
+    }
+    .contact__submit {
+      color: $color-lightgrey;
+      border-left: 2px solid $color-tertiary;
+      font: 600 1rem $font-primary;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    a {
+      border-right: 2px solid $color-tertiary;
+    }
+    .contact__submit:hover,
+    a:hover {
+      background-color: $color-tertiary;
+      color: $color-secondary;
+      i:hover {
+        color: unset;
+      }
     }
   }
 }

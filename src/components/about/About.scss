@@ -112,16 +112,30 @@
 }
 
 @media screen and (max-width: $mx-1) {
-  .about__pic {
-    max-height: 200px !important;
-  }
-}
-
-@media screen and (max-width: $mx-1-2) {
   .about__media {
     flex-direction: column;
     justify-content: center;
   }
+  .about__pic {
+    max-height: 200px !important;
+  }
+  .about__text {
+    padding: 20px 0 !important;
+    h2,
+    p {
+      width: 100% !important;
+      text-align: center;
+    }
+    ul {
+      justify-content: center !important;
+    }
+    .about__social {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: $mx-1-2) {
   .about__pic {
     max-height: 150px !important;
     span {
@@ -136,16 +150,6 @@
       transform: translate(-10px, -10px) !important;
     }
   }
-  .about__text {
-    padding: 20px 0 !important;
-    h2,
-    ul {
-      justify-content: center;
-    }
-    .about__social {
-      justify-content: center;
-    }
-  }
 }
 
 @media screen and (max-width: $mx-2) {
@@ -154,11 +158,6 @@
   }
   .about__text {
     padding: 10px 0 !important;
-    h2,
-    p {
-      width: 100% !important;
-      text-align: center;
-    }
     ul {
       align-items: center;
       flex-wrap: wrap;

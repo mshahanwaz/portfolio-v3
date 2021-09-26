@@ -38,6 +38,9 @@ function Menubar({ show, setShow }: Props) {
           <a href="/#blogs">Blogs</a>
         </div>
         <div className="menubar__link">
+          <a href="/#skills">Skills & Tools</a>
+        </div>
+        <div className="menubar__link">
           <a href="/#findme">Find Me</a>
         </div>
       </div>

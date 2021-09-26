@@ -4,7 +4,6 @@ import "./Sidebar.scss";
 interface Props {
   open: number;
   setOpen: Dispatch<SetStateAction<number>>;
-  setColor: Dispatch<SetStateAction<string>>;
 }
 
 const colors = [
@@ -35,13 +34,12 @@ const colors = [
   "#ff8bc9",
 ];
 
-function Sidebar({ open, setOpen, setColor }: Props) {
+function Sidebar({ open, setOpen }: Props) {
   const [currentColor, setCurrentColor] = useState("");
 
   const handleColor = (color: string) => {
     const root = document.documentElement;
     root.style.setProperty("--color-tertiary", color);
-    setColor(color);
     setCurrentColor(color);
   };
 
@@ -49,8 +47,7 @@ function Sidebar({ open, setOpen, setColor }: Props) {
     const root =
       document.documentElement.style.getPropertyValue("--color-tertiary");
     setCurrentColor(root);
-    if (root) setColor(root);
-  }, [setColor]);
+  }, [currentColor]);
 
   return (
     <section

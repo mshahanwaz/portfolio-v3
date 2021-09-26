@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
 import "./Menubar.scss";
-import { Link } from "react-router-dom";
 
 interface Props {
   show: number;

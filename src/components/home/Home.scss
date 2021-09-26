@@ -21,6 +21,11 @@
     }
     p:nth-child(2) {
       align-self: flex-end;
+      display: flex;
+      span {
+        background-color: $color-tertiary;
+        color: $color-secondary;
+      }
     }
   }
   .home__pics {

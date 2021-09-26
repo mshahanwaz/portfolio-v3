@@ -24,7 +24,9 @@ function Home({ name, image }: Props) {
         <div className="home__media">
           <div className="home__text">
             <p>Hi, I am</p>
-            <p>{name}.</p>
+            <p>
+              <span>{name}</span>.
+            </p>
           </div>
           <div className="home__pics">
             <img src={image} alt="" />

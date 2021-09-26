@@ -9,7 +9,7 @@ $font-code: "Fira Code", monospace;
   --color-secondary: #141414;
   --color-tertiary: #8bffb2;
   --color-grey: #242424;
-  --color-lightgrey: #666666;
+  --color-lightgrey: lightgrey;
 }
 $color-primary: var(--color-primary);
 $color-secondary: var(--color-secondary);

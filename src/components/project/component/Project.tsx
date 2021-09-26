@@ -4,55 +4,93 @@ import "./Project.scss";
 
 interface Props {
   index: number;
-  open: Array<boolean>;
-  setOpen: Dispatch<SetStateAction<Array<boolean>>>;
-  setPrevious: Dispatch<SetStateAction<number>>;
-  previous: number;
+  open: number;
+  setOpen: Dispatch<SetStateAction<number>>;
   project: any;
 }
 
 function Project(props: Props) {
-  const { open, setOpen, setPrevious, previous, index, project } = props;
+  const { open, setOpen, index, project } = props;
 
   const handleOpen = () => {
-    if (previous !== index) setPrevious(index);
-    setOpen(
-      open.map((_, i) => {
-        return i === index ? !open[i] : false;
-      })
-    );
+    setOpen(index);
   };
 
   return (
-    <div className={`project ${open[index] && "open"}`}>
+    <div className={`project ${open === index && "open"}`}>
       <div className="project__wrapper">
-        <div className="project__head">
+        <div
+          className="project__head"
+          onClick={() => handleOpen()}
+          style={
+            open === index
+              ? {
+                  backgroundColor: "var(--color-tertiary)",
+                }
+              : {}
+          }
+        >
           <div className="project__title">
             <h3
               style={{
-                color: open[index]
-                  ? "var(--color-tertiary)"
-                  : "var(--color-primary)",
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-tertiary)",
               }}
             >
               {project.title}
             </h3>
-            <span>
+            <span
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-lightgrey)",
+              }}
+            >
               {moment.unix(project.date.seconds).format("DD MMM, YYYY")}
             </span>
           </div>
           <div className="project__icons">
-            <a href={project.github}>
+            <a
+              href={project.github}
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+              }}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <i className="bi bi-github"></i>
             </a>
-            <button>
-              {open[index] ? (
-                <i
-                  className="bi bi-caret-up-fill"
-                  style={{ color: "var(--color-tertiary)" }}
-                ></i>
+            <a
+              href={project?.link}
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+              }}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i className="bi bi-arrow-up-right-square"></i>
+            </a>
+            <button
+              style={{
+                color:
+                  open === index
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+              }}
+            >
+              {open === index ? (
+                <i className="bi bi-caret-up-fill"></i>
               ) : (
-                <i className="bi bi-caret-down" onClick={handleOpen}></i>
+                <i className="bi bi-caret-down"></i>
               )}
             </button>
           </div>

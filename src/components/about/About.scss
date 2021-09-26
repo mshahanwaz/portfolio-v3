@@ -53,9 +53,6 @@
       font-size: 1.1rem;
     }
     h2 {
-      font-family: $font-secondary;
-      font-size: 3rem;
-      font-weight: 400;
       width: fit-content;
     }
     ul {
@@ -135,14 +132,13 @@
         left: 10px !important;
       }
     }
+    img:hover {
+      transform: translate(-10px, -10px) !important;
+    }
   }
   .about__text {
     padding: 20px 0 !important;
     h2,
-    p {
-      width: 100% !important;
-      text-align: center;
-    }
     ul {
       justify-content: center;
     }

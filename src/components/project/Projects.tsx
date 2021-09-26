@@ -6,8 +6,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 function Projects() {
-  const [open, setOpen] = useState<Array<boolean>>([true, false, false]);
-  const [previous, setPrevious] = useState<number>(0);
+  const [open, setOpen] = useState<number>(0);
   const [projects, setProjects] = useState<Array<any>>([]);
 
   useEffect(() => {
@@ -23,8 +22,8 @@ function Projects() {
   }, []);
 
   return (
-    <main className="projects container" id="projects">
-      <div className="projects__wrapper">
+    <main className="component-container container" id="projects">
+      <div className="component-wrapper">
         <div className="projects__media">
           <section className="projects__section">
             {projects?.map(
@@ -35,8 +34,6 @@ function Projects() {
                     index={i}
                     open={open}
                     setOpen={setOpen}
-                    setPrevious={setPrevious}
-                    previous={previous}
                     project={project}
                   />
                 )
@@ -50,23 +47,7 @@ function Projects() {
           <section className="projects__section">
             <h2>Featured Projects</h2>
             <div className="projects__previewImage">
-              <a
-                href={projects[previous]?.link}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <i className="bi bi-arrow-up-right-square"></i>
-              </a>
-              <img
-                src={
-                  previous === 0
-                    ? projects[0]?.image
-                    : previous === 1
-                    ? projects[1]?.image
-                    : projects[2]?.image
-                }
-                alt=""
-              />
+              <img src={projects[open]?.image} alt="preview" />
             </div>
           </section>
         </div>

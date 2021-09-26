@@ -78,14 +78,14 @@ function App() {
               <Projects />
               <Works />
               <Blogs />
-              <Skills skills={data.skills} />
-              <Contact
+              {/* <Skills skills={data.skills} /> */}
+              {/* <Contact
                 created_by={data.created_by}
                 social={data.social}
                 email={data.email}
                 phone={data.phone}
                 support_me={data.support_me}
-              />
+              /> */}
             </div>
           </div>
         </Route>

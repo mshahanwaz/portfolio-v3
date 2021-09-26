@@ -35,7 +35,7 @@ function Works() {
               (work, i) =>
                 i < 3 && (
                   <Work
-                    key={new Date().toDateString()}
+                    key={i}
                     index={i}
                     open={open}
                     setOpen={setOpen}

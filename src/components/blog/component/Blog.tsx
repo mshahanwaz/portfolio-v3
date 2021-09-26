@@ -1,5 +1,6 @@
 import moment from "moment";
 import "./Blog.scss";
+import { Link } from "react-router-dom";
 
 interface Props {
   image: string;
@@ -8,22 +9,32 @@ interface Props {
   description: string;
   tags: Array<string>;
   link: string;
+  close: boolean;
 }
 
-function Blog({ image, title, date, description, tags, link }: Props) {
+function Blog({ image, title, date, description, close, tags, link }: Props) {
   return (
     <div className="blog">
-      <div className="blog__wrapper">
+      <div
+        className="blog__wrapper"
+        style={
+          !close
+            ? {
+                borderRight: "2px solid var(--color-tertiary)",
+              }
+            : {}
+        }
+      >
         <div className="blog__image">
-          <a href={link}>
+          <Link to={link}>
             <img src={image} alt="" />
-          </a>
+          </Link>
         </div>
         <div className="blog__details">
           <span>{moment.unix(date.seconds).format("DD MMM, YYYY")}</span>
-          <a href={link}>
+          <Link to={link}>
             <h3 className="h-3">{title}</h3>
-          </a>
+          </Link>
           <p className="para">{description}</p>
           <div className="blog__tags">
             {tags.map((tag, i) => (

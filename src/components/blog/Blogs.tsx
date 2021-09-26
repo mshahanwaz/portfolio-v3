@@ -13,6 +13,11 @@ function Blogs() {
       let arr: Array<any> = [];
       querySnapshot.forEach((doc: any) => {
         arr.push(doc.data());
+        arr.push(doc.data());
+        arr.push(doc.data());
+        arr.push(doc.data());
+        arr.push(doc.data());
+        arr.push(doc.data());
       });
       setBlogs(arr);
     };
@@ -20,8 +25,8 @@ function Blogs() {
   }, []);
 
   return (
-    <main className="blogs container" id="blogs">
-      <div className="blogs__wrapper">
+    <main className="component-container container" id="blogs">
+      <div className="component-wrapper">
         <div className="blogs__media">
           <div className="blogs__title">
             <h2>Tiny Blogs</h2>
@@ -29,9 +34,10 @@ function Blogs() {
           <div className="blogs__list">
             {blogs?.map(
               (blog, i) =>
-                i < 3 && (
+                i < blogs?.length && (
                   <Blog
-                    key={new Date().toDateString()}
+                    close={i === blogs?.length - 1 ? true : false}
+                    key={i}
                     image={blog.image}
                     date={blog.date}
                     title={blog.title}

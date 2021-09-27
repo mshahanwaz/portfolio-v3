@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Footer from "../footer/Footer";
 import "./Contact.scss";
-import { collection, addDoc, doc, Timestamp } from "firebase/firestore";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 import db from "../../firebase";
 
 interface Props {

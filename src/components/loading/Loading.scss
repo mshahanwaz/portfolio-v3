@@ -1,0 +1,21 @@
+@import "../../utils/vars.scss";
+
+.loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-tertiary;
+  display: grid;
+  place-items: center;
+  .loading__text {
+    span {
+      font: 900 5rem $font-secondary;
+      display: inline;
+    }
+  }
+}
+
+@media screen and (max-width: $mx-2) {
+  .loading__text span {
+    font-size: 3rem !important;
+  }
+}

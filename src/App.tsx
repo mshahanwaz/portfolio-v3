@@ -2,12 +2,14 @@ import { collection, getDocs } from "@firebase/firestore";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { clearTimeout } from "timers";
 import "./App.scss";
 import About from "./components/about/About";
 import Blogs from "./components/blog/Blogs";
 import Contact from "./components/contact/Contact";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
+import Loading from "./components/loading/Loading";
 import Projects from "./components/project/Projects";
 import Skills from "./components/skill/Skills";
 import Works from "./components/work/Works";
@@ -21,6 +23,7 @@ function App() {
   const [show, setShow] = useState<number>(0);
   const [data, setData] = useState<any>({});
   const [blogs, setBlogs] = useState<Array<any>>([]);
+  const [wait, setWait] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,6 +42,12 @@ function App() {
     };
     fetchBlogs();
     fetchData();
+    const waiting = setTimeout(() => {
+      setWait(false);
+    }, 2000);
+    return () => {
+      clearTimeout(waiting);
+    };
   }, []);
 
   return (
@@ -52,40 +61,44 @@ function App() {
           <AllBlogs blogs={blogs} setOpen={setOpen} setShow={setShow} />
         </Route>
         <Route path="/">
-          <div className="app">
-            <Header
-              open={open}
-              setOpen={setOpen}
-              show={show}
-              setShow={setShow}
-            />
-            <div
-              onClick={(_) => {
-                setOpen(open > 0 ? 2 : 0);
-                setShow(show > 0 ? 2 : 0);
-              }}
-            >
-              <Home image={data.image} name={data.name} />
-              <About
-                image={data.image}
-                tags={data.tags}
-                description={data.description}
-                resume={data.resume}
-                social={data.social}
+          {wait ? (
+            <Loading />
+          ) : (
+            <div className="app">
+              <Header
+                open={open}
+                setOpen={setOpen}
+                show={show}
+                setShow={setShow}
               />
-              <Projects />
-              <Works />
-              <Blogs />
-              <Skills skills={data.skills} />
-              <Contact
-                created_by={data.created_by}
-                social={data.social}
-                email={data.email}
-                phone={data.phone}
-                support_me={data.support_me}
-              />
+              <div
+                onClick={(_) => {
+                  setOpen(open > 0 ? 2 : 0);
+                  setShow(show > 0 ? 2 : 0);
+                }}
+              >
+                <Home image={data.image} name={data.name} />
+                <About
+                  image={data.image}
+                  tags={data.tags}
+                  description={data.description}
+                  resume={data.resume}
+                  social={data.social}
+                />
+                <Projects />
+                <Works />
+                <Blogs />
+                <Skills skills={data.skills} />
+                <Contact
+                  created_by={data.created_by}
+                  social={data.social}
+                  email={data.email}
+                  phone={data.phone}
+                  support_me={data.support_me}
+                />
+              </div>
             </div>
-          </div>
+          )}
         </Route>
       </Switch>
     </Router>

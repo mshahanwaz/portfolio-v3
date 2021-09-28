@@ -11,7 +11,9 @@ function EachProject({ project }: Props) {
     project;
   return (
     <div className="eachProject">
-      <img src={image} alt="" />
+      <div className="eachProject__image">
+        <img src={image} alt="preview" />
+      </div>
       <div className="eachProject__details">
         <div className="eachProject__head">
           <h2>

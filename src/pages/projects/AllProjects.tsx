@@ -30,7 +30,7 @@ function AllProjects({ setOpen, setShow }: Props) {
     <div className="allProjects">
       <div className="wrapper">
         <Link to="/">
-          <i className="bi bi-arrow-left-circle" />
+          <i className="bi bi-arrow-left-square" title="Go back" />
         </Link>
         <div>
           {projects?.map((project, i) => (

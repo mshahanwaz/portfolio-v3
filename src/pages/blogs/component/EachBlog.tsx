@@ -1,5 +1,4 @@
 import moment from "moment";
-import React from "react";
 import "./EachBlog.scss";
 import { Link } from "react-router-dom";
 
@@ -12,7 +11,9 @@ function EachBlog({ blog }: Props) {
   const { image, title, date, description, tags, link } = blog;
   return (
     <div className="eachBlog">
-      <img src={image} alt="" />
+      <div className="eachBlog__image">
+        <img src={image} alt="" />
+      </div>
       <div className="eachBlog__details">
         <div className="eachBlog__head">
           <h2>{title}</h2>

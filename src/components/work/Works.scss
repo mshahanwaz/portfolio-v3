@@ -1,7 +1,9 @@
 @import "../../utils/vars.scss";
 
 .works__media {
-  border: 2px solid $color-tertiary;
+  border-top: 2px solid $color-tertiary;
+  border-right: 2px solid $color-tertiary;
+  border-left: 2px solid $color-tertiary;
   max-width: $mx-1;
   width: 100%;
   height: fit-content;

@@ -2,21 +2,25 @@
 
 .eachProject {
   width: 100%;
+  height: fit-content;
   margin: 50px 0;
   display: flex;
   align-items: center;
-  border-right: 50px solid $color-primary;
-  border-top: 1px solid $color-primary;
-  border-left: 1px solid $color-primary;
-  border-bottom: 1px solid $color-primary;
+  border: 2px solid $color-tertiary;
   &:hover {
     border-color: $color-tertiary;
   }
-  img {
-    width: 400px;
+  .eachProject__image {
+    flex: 1;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
   }
   .eachProject__details {
     padding: 20px;
+    border-left: 2px solid $color-tertiary;
+    flex: 1;
     .eachProject__head {
       h2 {
         font-size: 2rem;
@@ -29,7 +33,7 @@
       & > span {
         margin: 5px 0;
         color: $color-lightgrey;
-        font: 400 1rem $font-code;
+        font: 500 0.8rem $font-code;
       }
     }
     .eachProject__tags {
@@ -38,11 +42,11 @@
         color: $color-lightgrey;
         border: 1px dashed $color-lightgrey;
         display: inline-block;
-        padding: 5px 10px;
+        padding: 4px 8px;
         font-size: 0.8rem;
         margin-top: 5px;
         &:not(&:last-child) {
-          margin-right: 5px;
+          margin-right: 10px;
         }
         &:hover {
           color: $color-tertiary;
@@ -51,7 +55,7 @@
       }
     }
     .eachProject__description {
-      margin: 5px 0;
+      margin: 10px 0;
     }
     .eachProject__links {
       a {
@@ -65,13 +69,10 @@
   .eachProject {
     flex-direction: column;
     align-items: flex-start;
-    border-right-width: 1px;
-    img {
+    .eachProject__details {
       width: 100%;
-      border-bottom: 1px solid $color-primary;
-    }
-    &:hover img {
-      border-color: $color-tertiary;
+      border-left: none !important;
+      border-top: 2px solid $color-tertiary !important;
     }
   }
 }

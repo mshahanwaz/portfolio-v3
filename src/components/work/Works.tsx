@@ -3,7 +3,6 @@ import Work from "./component/Work";
 import { useEffect, useState } from "react";
 import db from "../../firebase";
 import { collection, getDocs } from "@firebase/firestore";
-import { Link } from "react-router-dom";
 
 function Works() {
   const [open, setOpen] = useState<number>(0);
@@ -43,11 +42,6 @@ function Works() {
                   />
                 )
             )}
-            <div className="works__button">
-              <Link to="/workexp" className="button_link">
-                Explore
-              </Link>
-            </div>
           </section>
         </div>
       </div>

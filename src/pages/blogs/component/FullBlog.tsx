@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import "./FullBlog.scss";
+import Loading from "../../../components/loading/Loading";
 
 function FullBlog() {
   const [blog, setBlog] = useState<any>({ fetched: 0 });
@@ -25,7 +26,7 @@ function FullBlog() {
     <div className="fullBlog">
       <div className="wrapper">
         <Link to="/blogs">
-          <i className="bi bi-arrow-left-circle" />
+          <i className="bi bi-arrow-left-square" />
         </Link>
         <img src={blog.image} alt="" />
         <div className="fullBlog__details">
@@ -44,7 +45,7 @@ function FullBlog() {
       </div>
     </div>
   ) : (
-    <p>Loading...</p>
+    <Loading />
   );
 }
 

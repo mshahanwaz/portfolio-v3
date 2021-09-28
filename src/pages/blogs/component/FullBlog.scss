@@ -12,23 +12,25 @@
     .fullBlog__head {
       margin-bottom: 20px;
       h2 {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       span {
         margin: 5px 0;
         color: $color-lightgrey;
-        font: 400 1rem $font-code;
+        font: 500 1rem $font-code;
       }
     }
   }
   .fullBlog__tags {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-family: $font-code;
     span {
       color: $color-lightgrey;
       border: 2px dashed $color-lightgrey;
       display: inline-block;
-      padding: 10px;
+      padding: 5px 10px;
+      font-size: 1rem;
+      font-weight: 500;
       &:not(&:last-child) {
         margin-right: 20px;
       }
@@ -39,16 +41,22 @@
     }
   }
   .fullBlog__description {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     font: 400 1.5rem $font-primary;
+    color: $color-lightgrey;
     border-bottom: 1px solid $color-tertiary;
     &::before {
-      content: "> ";
+      content: ">";
+      color: $color-secondary;
+      font-weight: 900;
+      background-color: $color-tertiary;
+      margin-right: 10px;
+      padding: 0 10px;
     }
   }
   .fullBlog__blog {
     font-size: 1.3rem;
     line-height: 2.2rem;
-    padding-top: 20px;
+    margin-top: 30px;
   }
 }

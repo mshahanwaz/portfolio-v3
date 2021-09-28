@@ -19,7 +19,7 @@ function AllBlogs({ setOpen, setShow, blogs }: Props) {
     <div className="allBlogs">
       <div className="wrapper">
         <Link to="/">
-          <i className="bi bi-arrow-left-circle" />
+          <i className="bi bi-arrow-left-square" />
         </Link>
         <div className="allBlogs__blogs">
           {blogs?.map((blog, i) => (

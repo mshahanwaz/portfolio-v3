@@ -40,6 +40,7 @@ function Sidebar({ open, setOpen }: Props) {
   const handleColor = (color: string) => {
     const root = document.documentElement;
     root.style.setProperty("--color-tertiary", color);
+    localStorage.setItem("color", color);
     setCurrentColor(color);
   };
 

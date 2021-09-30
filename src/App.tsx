@@ -42,6 +42,10 @@ function App() {
     };
     fetchBlogs();
     fetchData();
+    const color = localStorage.getItem("color");
+    const root = document.documentElement;
+    if (color) root.style.setProperty("--color-tertiary", color);
+    else root.style.setProperty("--color-tertiary", "#fff");
     const waiting = setTimeout(() => {
       setWait(false);
     }, 2000);

@@ -4,40 +4,32 @@ import "./Sidebar.scss";
 interface Props {
   open: number;
   setOpen: Dispatch<SetStateAction<number>>;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
 const colors = [
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
-  "#fdff8b",
-  "#df5900",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#ff8b8b",
-  "#d48bff",
-  "#ff8bc9",
+  "#ff0040",
+  "#ff9d76",
+  "#ff7b47",
+  "#ffcb76",
+  "#ffac27",
+  "#ffee00",
+  "#73ff00",
+  "#00ffb3",
+  "#00fff2",
+  "#00b7ff",
+  "#2457ff",
+  "#ad65ff",
+  "#b700ff",
+  "#f700ff",
+  "#ff009d",
 ];
 
-function Sidebar({ open, setOpen }: Props) {
+function Sidebar({ open, setOpen, setColor }: Props) {
   const [currentColor, setCurrentColor] = useState("");
 
   const handleColor = (color: string) => {
+    setColor(color);
     const root = document.documentElement;
     root.style.setProperty("--color-tertiary", color);
     localStorage.setItem("color", color);

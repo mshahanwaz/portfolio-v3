@@ -1,12 +1,12 @@
 import "./Home.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
-
+import Pic from "../../assets/Pic";
 interface Props {
   name: string;
-  image: string;
+  color: string;
 }
 
-function Home({ name, image }: Props) {
+function Home({ name, color }: Props) {
   return (
     <main className="component-container container">
       <div className="component-wrapper">
@@ -19,8 +19,8 @@ function Home({ name, image }: Props) {
               <span>{name}.</span>
             </p>
           </div>
-          <div className="home__pics">
-            <img src={image} alt="" />
+          <div className="home__pic">
+            <Pic color={color} />
           </div>
         </div>
         <a href="/#about" className="home__mouse">

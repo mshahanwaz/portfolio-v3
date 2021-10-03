@@ -24,6 +24,7 @@ function App() {
   const [data, setData] = useState<any>({});
   const [blogs, setBlogs] = useState<Array<any>>([]);
   const [wait, setWait] = useState<boolean>(true);
+  const [color, setColor] = useState<string>("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -42,10 +43,15 @@ function App() {
     };
     fetchBlogs();
     fetchData();
-    const color = localStorage.getItem("color");
+    const fetchColor = localStorage.getItem("color");
     const root = document.documentElement;
-    if (color) root.style.setProperty("--color-tertiary", color);
-    else root.style.setProperty("--color-tertiary", "#fff");
+    if (fetchColor) {
+      root.style.setProperty("--color-tertiary", fetchColor);
+      setColor(fetchColor);
+    } else {
+      root.style.setProperty("--color-tertiary", "#fff");
+      setColor("#fff");
+    }
     const waiting = setTimeout(() => {
       setWait(false);
     }, 2000);
@@ -74,6 +80,7 @@ function App() {
                 setOpen={setOpen}
                 show={show}
                 setShow={setShow}
+                setColor={setColor}
               />
               <div
                 onClick={(_) => {
@@ -81,13 +88,13 @@ function App() {
                   setShow(show > 0 ? 2 : 0);
                 }}
               >
-                <Home image={data.image} name={data.name} />
+                <Home name={data.name} color={color} />
                 <About
-                  image={data.image}
                   tags={data.tags}
                   description={data.description}
                   resume={data.resume}
                   social={data.social}
+                  color={color}
                 />
                 <Projects />
                 <Works />

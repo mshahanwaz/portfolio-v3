@@ -9,9 +9,10 @@ interface Props {
   open: number;
   setOpen: Dispatch<SetStateAction<number>>;
   setShow: Dispatch<SetStateAction<number>>;
+  setColor: Dispatch<SetStateAction<string>>;
 }
 
-function Header({ open, show, setOpen, setShow }: Props) {
+function Header({ open, show, setOpen, setShow, setColor }: Props) {
   const [showBurger, setShowBurger] = useState(false);
 
   const handleResize = () => {
@@ -91,7 +92,7 @@ function Header({ open, show, setOpen, setShow }: Props) {
           </span>
         </div>
       </nav>
-      <Sidebar open={open} setOpen={setOpen} />
+      <Sidebar open={open} setColor={setColor} setOpen={setOpen} />
       <Menubar show={show} setShow={setShow} />
     </header>
   );

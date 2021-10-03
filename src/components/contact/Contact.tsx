@@ -23,14 +23,25 @@ function Contact({ created_by, social, email, phone, support_me }: Props) {
 
   const handleForm = async (e) => {
     e.preventDefault();
+    const input = document.querySelector(
+      ".contact__submit"
+    ) as HTMLInputElement;
     if (validateEmail(userEmail)) {
       await addDoc(collection(db, "emails"), {
         email: userEmail,
         time: Timestamp.fromDate(new Date()),
       });
       setUserEmail("");
-      alert("Sent");
-    } else alert("Email is badly formatted!");
+      input.value = "Sent 😀";
+      setTimeout(() => {
+        input.value = "Ping me";
+      }, 2000);
+    } else {
+      input.value = "Error ⚠️";
+      setTimeout(() => {
+        input.value = "Ping me";
+      }, 2000);
+    }
   };
   return (
     <main className="component-container container" id="findme">

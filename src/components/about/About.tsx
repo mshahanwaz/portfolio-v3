@@ -1,22 +1,23 @@
 import "./About.scss";
 import { Fragment } from "react";
+import Pic from "../../assets/Pic";
 
 interface Props {
   tags: Array<string>;
   description: string;
   resume: string;
   social: any;
-  image: string;
+  color: string;
 }
 
-function About({ image, tags, description, resume, social }: Props) {
+function About({ tags, description, resume, social, color }: Props) {
   return (
     <main className="about component-container container" id="about">
       <div className="about__wrapper component-wrapper">
         <div className="about__media">
           <div className="about__pic">
             <span></span>
-            <img src={image} alt="" />
+            <Pic color={color} />
           </div>
           <div className="about__text">
             <h2>About me</h2>

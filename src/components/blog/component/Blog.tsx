@@ -26,13 +26,13 @@ function Blog({ image, title, date, description, close, tags, link }: Props) {
         }
       >
         <div className="blog__image">
-          <Link to={link}>
+          <Link to={`/blogs/${link}`}>
             <img src={image} alt="" />
           </Link>
         </div>
         <div className="blog__details">
           <span>{moment.unix(date.seconds).format("DD MMM, YYYY")}</span>
-          <Link to={link}>
+          <Link to={`/blogs/${link}`}>
             <h3 className="h-3">{title}</h3>
           </Link>
           <p className="para">{description}</p>

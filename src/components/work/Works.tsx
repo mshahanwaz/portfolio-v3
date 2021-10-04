@@ -14,8 +14,6 @@ function Works() {
       let arr: Array<any> = [];
       querySnapshot.forEach((doc: any) => {
         arr.push(doc.data());
-        arr.push(doc.data());
-        arr.push(doc.data());
       });
       setWorks(arr);
     };

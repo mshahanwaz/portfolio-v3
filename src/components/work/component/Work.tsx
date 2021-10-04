@@ -65,7 +65,7 @@ function Work(props: Props) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <i className="bi bi-arrow-up-right-square"></i>
+              <i className="bi bi-file-earmark-text" title="Certificate"></i>
             </a>
             <button
               style={{

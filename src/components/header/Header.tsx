@@ -72,9 +72,9 @@ function Header({ open, show, setOpen, setShow, setColor }: Props) {
             >
               Work Exp.
             </a>
-            <a className={hash === "#blogs" ? "give-bg" : ""} href="/#blogs">
+            {/* <a className={hash === "#blogs" ? "give-bg" : ""} href="/#blogs">
               Blogs
-            </a>
+            </a> */}
             <a className={hash === "#findme" ? "give-bg" : ""} href="/#findme">
               Find Me
             </a>

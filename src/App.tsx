@@ -98,7 +98,7 @@ function App() {
                 />
                 <Projects />
                 <Works />
-                <Blogs />
+                {/* <Blogs /> */}
                 <Skills skills={data.skills} />
                 <Contact
                   created_by={data.created_by}

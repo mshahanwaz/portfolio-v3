@@ -39,7 +39,7 @@ function Contact({ created_by, social, email, phone, support_me }: Props) {
     } else {
       input.value = "Error ⚠️";
       setTimeout(() => {
-        input.value = "Ping me";
+        input.value = "Ping me 📌";
       }, 2000);
     }
   };
@@ -83,7 +83,11 @@ function Contact({ created_by, social, email, phone, support_me }: Props) {
               value={userEmail}
               onChange={(e) => setUserEmail(e.target.value)}
             />
-            <input className="contact__submit" type="submit" value="Ping Me" />
+            <input
+              className="contact__submit"
+              type="submit"
+              value="Ping Me 📌"
+            />
           </form>
           <a
             className="button_link"

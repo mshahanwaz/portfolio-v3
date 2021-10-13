@@ -34,9 +34,9 @@ function Menubar({ show, setShow }: Props) {
         <div className="menubar__link">
           <a href="/#workexp">Work Exp.</a>
         </div>
-        <div className="menubar__link">
+        {/* <div className="menubar__link">
           <a href="/#blogs">Blogs</a>
-        </div>
+        </div> */}
         <div className="menubar__link">
           <a href="/#skills">Skills & Tools</a>
         </div>

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { clearTimeout } from "timers";
 import "./App.scss";
 import About from "./components/about/About";
-import Blogs from "./components/blog/Blogs";
+// import Blogs from "./components/blog/Blogs";
 import Contact from "./components/contact/Contact";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
